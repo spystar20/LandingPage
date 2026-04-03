@@ -180,7 +180,7 @@
                             class="w-full bg-cover bg-center rounded-3xl h-full group-hover:scale-105 transition transform duration-500 ease-in">
                         </div>
                         <div
-                            class=" w-full h-auto hover:bg-black/30 ease-in duration-300 transition-all rounded-2xl bg-linear-to-t from-black/90 from-0% via-black/40 via-25% to-transparent to-30% absolute inset-0 flex items-end justify-between py-3 px-36">
+                            class=" w-full h-auto hover:bg-black/30 ease-in duration-300 transition-all rounded-2xl bg-linear-to-t from-black/90 from-0% via-black/40 via-25% to-transparent to-30% absolute inset-0 flex items-end justify-between py-3 ">
                             <div class="transform translate-y-1/2 group-hover:translate-y-0 transition duration-300">
                                 <div class="flex  justify-between items-center w-full">
                                     <h1 class="text-3xl font-projects font-semibold  text-white"> Velvet Dusk Interiors</h1>
