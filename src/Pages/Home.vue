@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-screen flex flex-col gap-10">
+    <div class="w-full h-screen flex flex-col gap-10 ">
         <!-- hero-section -->
         <div class="w-full flex items-center justify-center relative h-screen rounded-4xl ">
             <div style="background-image: url(https://i.pinimg.com/736x/f0/fc/2b/f0fc2b6b3a4ed4ca321fdecdd6b5fe98.jpg);"
@@ -66,22 +66,42 @@
             </div>
         </div>
 <!-- approach -->
-<div class="p-5">
-<div class=" w-full rounded-3xl bg-gray-100 px-12 py-20 grid grid-cols-2 ">
-    <div>
-<h1>Lorem ipsum dolor sit amet.</h1>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quis voluptate vitae eaque! Nostrum facilis minus, alias necessitatibus, maiores est beatae quaerat explicabo repudiandae, ducimus qui! Dignissimos voluptas distinctio nemo quaerat assumenda sequi aliquid? Dolorem consectetur inventore recusandae amet veniam. Eveniet cum ullam aut quia.</p>
-<img src="https://i.pinimg.com/474x/f7/b1/37/f7b137ff9173e3a8eae8e89a4fd0ac97.jpg" alt="">
+<div class="p-1">
+<div class=" w-full rounded-3xl bg-gray-100 px-6 py-20 grid grid-cols-2 ">
+    <div class="flex flex-col gap-6 ">
+<h1 class="font-heading text-5xl font-semibold ">Elevating Everyday Spaces</h1>
+<p class="font-body font-normal text-sm text-gray-700 w-[86%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="font-semibold">Temporibus</span> quis voluptate vitae eaque! Nostrum facilis minus, alias necessitatibus, <span class="font-semibold">maiores</span> est beatae quaerat explicabo repudiandae</p>
+<img :src="approach" class="opacity-95 brightness-75" alt="">
 </div>
-<div>
-    <div>
+<div class="flex flex-col gap-5 items-center justify-center px-12 w-[85%]" >
+    <div class="flex gap-4 bg-black/85 rounded-xl p-5 ">
         <div>
-            <img src="https://i.pinimg.com/736x/19/11/3b/19113be5d73a42a2eaf3141eba57a644.jpg" alt="">
+            <img src="https://i.pinimg.com/736x/ae/68/b6/ae68b669e2b0ce0174ab9a70980f4cf9.jpg" class="rounded-lg aspect-sqaure w-50" alt="">
 
         </div>
+        <div class=" text-white flex flex-col gap-2">
+            <h3 class="font-heading font-medium text-2xl">Lorem, ipsum dolor.</h3>
+            <p class="font-body text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quas consequuntur cumque?</p>
+        </div>
+    </div>
+    <div class="flex gap-4 bg-black/85 rounded-xl p-5 ">
         <div>
-            <h3>Lorem, ipsum dolor.</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quas consequuntur cumque?</p>
+            <img src="https://i.pinimg.com/736x/ae/68/b6/ae68b669e2b0ce0174ab9a70980f4cf9.jpg" class="rounded-lg aspect-sqaure w-50" alt="">
+
+        </div>
+        <div class=" text-white flex flex-col gap-2">
+            <h3 class="font-heading font-medium text-2xl">Lorem, ipsum dolor.</h3>
+            <p class="font-body text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quas consequuntur cumque?</p>
+        </div>
+    </div>
+    <div class="flex gap-4 bg-black/85 rounded-xl p-5 ">
+        <div>
+            <img src="https://i.pinimg.com/736x/ae/68/b6/ae68b669e2b0ce0174ab9a70980f4cf9.jpg" class="rounded-lg aspect-sqaure w-50" alt="">
+
+        </div>
+        <div class=" text-white flex flex-col gap-2">
+            <h3 class="font-heading font-medium text-2xl">Lorem, ipsum dolor.</h3>
+            <p class="font-body text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quas consequuntur cumque?</p>
         </div>
     </div>
 </div>
@@ -348,6 +368,7 @@
 
 <script setup>
 import { ArrowUpRight } from 'lucide-vue-next';
+import approach from '../assets/approach.png'
 </script>
 
 <style lang="scss" scoped></style>
