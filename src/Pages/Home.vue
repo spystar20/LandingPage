@@ -4,8 +4,8 @@
         <div class="w-full flex items-center justify-center relative h-screen rounded-4xl ">
             <div style="background-image: url(https://i.pinimg.com/736x/f0/fc/2b/f0fc2b6b3a4ed4ca321fdecdd6b5fe98.jpg);"
                 class="bg-black w-full h-screen rounded-4xl  bg-cover bg-center ">
-                <div class="absolute flex justify-center  items-center inset-0 bg-black/40 rounded-4xl">
-                    <div class=" text-center flex flex-col items-center gap-5  justify-center text-white  ">
+                <div class="absolute flex justify-center  items-center inset-0 bg-black/40 rounded-4xl ">
+                    <div class=" text-center flex flex-col items-center gap-5  justify-center text-white  hero-title">
                         <h2 class="font-semibold font-heading text-5xl capitalize ">Designed Around Your <span
                                 class="italic bg-linear-to-r from-white to-main text-transparent bg-clip-text  ">Comfort</span>
                         </h2>
@@ -76,7 +76,7 @@
 <!-- Material & Texture -->
  <!-- Lighting & Atmosphere -->
 <div class="flex flex-col gap-5 items-center justify-center px-12 w-[85%]" >
-        <div class="flex gap-4 bg-linear-to-t from-main to-black  hover:bg-black rounded-xl p-4 group">
+        <div class="feature flex gap-4 bg-linear-to-t from-main to-black  hover:bg-black rounded-xl p-4 group">
         <div class=" transition-all duration-300 ease-out">
             <img src="https://i.pinimg.com/1200x/87/3f/89/873f8928e27c13c03bb5862951ddb09a.jpg" class="rounded-lg aspect-square  transition-all duration-300 ease-out w-50 group-hover:scale-110 hover:transform-border border-2" alt="">
 
@@ -87,7 +87,7 @@
         </div>
     </div>
 
-    <div class="flex gap-4 bg-black/85 rounded-xl p-5 ">
+    <div class="feature flex gap-4 bg-black/85 rounded-xl p-5 ">
         <div>
             <img src="https://i.pinimg.com/1200x/87/3f/89/873f8928e27c13c03bb5862951ddb09a.jpg" class="rounded-lg aspect-sqaure w-50" alt="">
 
@@ -97,7 +97,7 @@
             <p class="font-body text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quas consequuntur cumque?</p>
         </div>
     </div>
-    <div class="flex gap-4 bg-black/85 rounded-xl p-5 ">
+    <div class="feature flex gap-4 bg-black/85 rounded-xl p-5 ">
         <div>
             <img src="https://i.pinimg.com/736x/ae/68/b6/ae68b669e2b0ce0174ab9a70980f4cf9.jpg" class="rounded-lg aspect-sqaure w-50" alt="">
 
@@ -373,6 +373,19 @@
 <script setup>
 import { ArrowUpRight } from 'lucide-vue-next';
 import approach from '../assets/approach.png'
+import gsap from 'gsap';
+import { onMounted } from 'vue';
+
+onMounted(()=>{
+gsap.from(".hero-title",{
+    y:-80,opacity:0,duration:1.2,ease:"power3.out"
+})
+gsap.from(".feature",{
+    y:100 , opacity:0,stagger:{
+        each:0.15,from:'center'
+    },ease:"power3.out" ,duration:1.2
+})
+})
 </script>
 
 <style lang="scss" scoped></style>
