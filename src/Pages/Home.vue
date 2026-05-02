@@ -386,23 +386,82 @@
         </div>
 
         <!-- stats section -->
-        <div class="px-5 pb-12 grid grid-cols-2">
-            <div class="w-full py-12 rounded-2xl  bg-linear-to-r from-black to-main">
+        <div class="px-5 pb-12 grid grid-cols-2 gap-6">
+            <div class="w-full  p-12 items-center gap-3 rounded-2xl  bg-linear-to-b from-black to-main text-gray-100 grid grid-cols-2">
+<div class="flex flex-col gap-8 mb-16">
+<div class=" border-gray-200/20 border rounded-2xl flex flex-col gap-3 p-4 bg-white/5 backdrop-blur-md transition duration-300 hover:bg-white/10">
+    <div class="flex items-center gap-3">
+        <PenTool class="text-white w-6 h-6 opacity-80"/>
+        <h2 class="text-xl font-semibold ">Bespoke Concepts</h2></div>
+    <P class="text-sm font-body  text-gray-300 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores necessitatibus t</P>
+</div>
+<div class=" border-gray-200/20 border rounded-2xl flex flex-col gap-3 p-4 bg-white/5 backdrop-blur-md transition duration-300 hover:bg-white/10">
+    <div class="flex items-center gap-3">
+        <PenTool class="text-white w-6 h-6 opacity-80"/>
+        <h2 class="text-xl font-semibold ">Bespoke Concepts</h2></div>
+    <P class="text-sm font-body  text-gray-300 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores necessitatibus t</P>
+</div>
+</div>
+<div class="flex flex-col gap-8 mt-16">
+<div class=" border-gray-200/20 border rounded-2xl flex flex-col gap-3 p-4 bg-white/5 backdrop-blur-md transition duration-300 hover:bg-white/10">
+    <div class="flex items-center gap-3">
+        <PenTool class="text-white w-6 h-6 opacity-80"/>
+        <h2 class="text-xl font-semibold ">Bespoke Concepts</h2></div>
+    <P class="text-sm font-body  text-gray-300 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores necessitatibus t</P>
+</div>
+<div class=" border-gray-200/20 border rounded-2xl flex flex-col gap-3 p-4 bg-white/5 backdrop-blur-md transition duration-300 hover:bg-white/10">
+    <div class="flex items-center gap-3">
+        <PenTool class="text-white w-6 h-6 opacity-80"/>
+        <h2 class="text-xl font-semibold ">Bespoke Concepts</h2></div>
+    <P class="text-sm font-body  text-gray-300 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores necessitatibus t</P>
+</div>
+</div>
+            </div>
+            <div class=" px-3 box-border w-full flex flex-col justify-end items-end-safe gap-4">
+                <!-- heading -->
+                <div class="flex flex-col items-end w-full gap-4 ">
 
+                    <h2 class=" flex flex-wrap justify-end font-heading text-5xl font-semibold capitalize gap-x-4  leading-tight ">
+                        <span class="text-center">Where Detail Shapes</span>
+                        <div class="flex gap-4"><span class="italic  ">Meaningful</span> <img
+                                class="w-40  h-20 object-cover  rounded-full"
+                                src="https://i.pinimg.com/736x/db/48/75/db4875081f8248aa02d8420912fcf84e.jpg" alt="">
+                        </div>
+                        <span class="italic"> Design </span>
+                    </h2>
+                    <h6 class="capitalize font-body font-bold flex items-center gap-2 "><ArrowLeft class="w-5 text-black" /><span class=" h-[0.5px] bg-black w-50"></span>inside the process</h6>
+
+                  <div class="flex items-end flex-row-reverse gap-3 ">  
+                    <p class=" w-[65%] text-xs font-body  text-end">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde rem accusamus, fuga saepe aut eos optio repudiandae Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt enim facere architecto.
+                    </p>
+                <button class="px-6 py-2 cursor-pointer hover:bg-white hover:border-black border hover:text-black transition-all duration-300 ease-in
+                 bg-black text-white rounded-full">Learn More</button></div>
+                </div>
+<!-- stat -->
+ <div class="flex gap-4 py-6">
+    <div class="flex flex-col items-center  gap-1 px-6 ">
+        <h2 class="text-4xl font-bold font-projects">150+</h2>
+        <p class="text-base font-medium">Curated Interiors</p>
+    </div>
+    <span class="w-[0.5px] h-5 bg-gray-400 flex self-center"></span>
+ <div class="flex flex-col items-center  gap-1 px-6 ">
+        <h2 class="text-4xl font-bold font-projects">50+</h2>
+        <p class="text-base font-medium">Happy Customers</p>
+    </div>
+    <span class="w-[0.5px] h-5 bg-gray-400 flex self-center"></span>
+    <div class="flex flex-col items-center  gap-1 px-6 ">
+        <h2 class="text-4xl font-bold font-projects">10+</h2>
+        <p class="text-base font-medium">Industry Expertise</p>
+    </div>
+ </div>
+ <div class="w-full">
+    <img class="rounded-2xl h-[280px] object-cover w-full" src="https://i.pinimg.com/1200x/e5/b0/c7/e5b0c7297721a4be2f3e258a3afc5587.jpg" alt="">
+ </div>
             </div>
-            <div class="py-12 px-6">
-                <span class="flex ">
-                    <h2 class="font-heading text-5xl font-bold capitalize ">Built on Detail and Intent</h2>
-                    <span class="flex flex-col items-center justify-center">
-                        <img class="max-w-[85px] aspect-square rounded-full" src="https://i.pinimg.com/736x/db/48/75/db4875081f8248aa02d8420912fcf84e.jpg" alt="">
-                        <span class="flex ">
-                            <img class="max-h-[60px] aspect-square rounded-full" src="https://i.pinimg.com/1200x/a0/c7/92/a0c79229e628d6dbdb7a287f0fc52e30.jpg" alt="">
-                            <img class="max-w-[70px] aspect-square rounded-full" src="https://i.pinimg.com/1200x/2e/49/30/2e4930b5171c169a9a8c1ffa4f504a9d.jpg" alt="">
-                        </span>
-                    </span>
-                </span>
-            </div>
+
         </div>
+
     </div>
 
 
@@ -410,7 +469,7 @@
 </template>
 
 <script setup>
-import { ArrowUpRight } from 'lucide-vue-next';
+import { ArrowUpRight,ArrowLeft, PenTool } from 'lucide-vue-next';
 import approach from '../assets/approach.png'
 import gsap from 'gsap';
 import { onMounted } from 'vue';
