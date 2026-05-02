@@ -1,5 +1,5 @@
 <template>
-    <div class=" flex justify-between items-center-safe text-gray-800 font-medium w-full  py-5 text-lg  capitalize ">
+    <div class="px-5 flex justify-between items-center-safe text-gray-800 font-medium w-full  py-5 text-lg  capitalize ">
         <div>
            <h2 class="text-4xl font-bold text-main uppercase">Logo</h2>
         </div>

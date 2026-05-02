@@ -1,10 +1,10 @@
 <template>
-    <div class="w-full h-screen flex flex-col gap-10 ">
+    <div class="w-full min-h-screen  flex flex-col gap-10 ">
         <!-- hero-section -->
-        <div class="w-full flex items-center justify-center relative h-screen rounded-4xl ">
+        <div class="w-full flex items-center justify-center relative h-screen rounded-4xl px-5 box-border ">
             <div style="background-image: url(https://i.pinimg.com/736x/f0/fc/2b/f0fc2b6b3a4ed4ca321fdecdd6b5fe98.jpg);"
-                class="bg-black w-full h-screen rounded-4xl  bg-cover bg-center ">
-                <div class="absolute flex justify-center  items-center inset-0 bg-black/40 rounded-4xl ">
+                class="bg-black  w-full h-screen rounded-4xl  bg-cover bg-center ">
+                <div class=" absolute  flex justify-center  items-center inset-x-5 inset-y-0 bg-black/40 rounded-4xl ">
                     <div class=" text-center flex flex-col items-center gap-5  justify-center text-white  hero-title">
                         <h2 class="font-semibold font-heading text-5xl capitalize ">Designed Around Your <span
                                 class="italic bg-linear-to-r from-white to-main text-transparent bg-clip-text  ">Comfort</span>
@@ -24,7 +24,7 @@
             </div>
         </div>
         <!-- about -->
-        <div class="py-5 flex flex-row gap-8">
+        <div class="p-5 flex flex-row gap-8 ">
             <!-- col-1 -->
             <div class="w-[70%] ">
                 <div style="background-image: url(https://i.pinimg.com/1200x/5d/2f/b8/5d2fb87f8c6aacb1d930e01e401f8a05.jpg
@@ -65,54 +65,65 @@
 
             </div>
         </div>
-<!-- approach -->
-<div class="p-1">
-<div class=" w-full rounded-3xl bg-gray-100 px-6 py-20 grid grid-cols-2 ">
-    <div class="flex flex-col gap-6 ">
-<h1 class="font-heading text-5xl font-semibold ">Elevating Everyday Spaces</h1>
-<p class="font-body font-normal text-sm text-gray-700 w-[86%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="font-semibold">Temporibus</span> quis voluptate vitae eaque! Nostrum facilis minus, alias necessitatibus, <span class="font-semibold">maiores</span> est beatae quaerat explicabo repudiandae</p>
-<img :src="approach" class="opacity-95 brightness-75" alt="">
-</div>
-<!-- Material & Texture -->
- <!-- Lighting & Atmosphere -->
-<div class="flex flex-col gap-5 items-center justify-center px-12 w-[85%]" >
-        <div class="feature flex gap-4 bg-linear-to-t from-main to-black  hover:bg-black rounded-xl p-4 group">
-        <div class=" transition-all duration-300 ease-out">
-            <img src="https://i.pinimg.com/1200x/87/3f/89/873f8928e27c13c03bb5862951ddb09a.jpg" class="rounded-lg aspect-square  transition-all duration-300 ease-out w-50 group-hover:scale-110 hover:transform-border border-2" alt="">
+        <!-- approach -->
+        <div class="p-5">
+            <div class=" w-full rounded-3xl bg-gray-100 px-6 py-20 grid grid-cols-2 ">
+                <div class="flex flex-col gap-6 ">
+                    <h1 class="font-heading text-5xl font-semibold ">Elevating Everyday Spaces</h1>
+                    <p class="font-body font-normal text-sm text-gray-700 w-[86%]">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. <span class="font-semibold">Temporibus</span> quis voluptate vitae
+                        eaque! Nostrum facilis minus, alias necessitatibus, <span class="font-semibold">maiores</span>
+                        est beatae quaerat explicabo repudiandae</p>
+                    <img :src="approach" class="opacity-95 brightness-75" alt="">
+                </div>
+                <!-- Material & Texture -->
+                <!-- Lighting & Atmosphere -->
+                <div class="flex flex-col gap-5 items-center justify-center px-12 w-[85%]">
+                    <div
+                        class="feature flex gap-4 bg-linear-to-t from-main to-black  hover:bg-black rounded-xl p-4 group">
+                        <div class=" transition-all duration-300 ease-out">
+                            <img src="https://i.pinimg.com/1200x/87/3f/89/873f8928e27c13c03bb5862951ddb09a.jpg"
+                                class="rounded-lg aspect-square  transition-all duration-300 ease-out w-50 group-hover:scale-110 hover:transform-border border-2"
+                                alt="">
+
+                        </div>
+                        <div class=" text-white flex flex-col  gap-1 items-start justify-center ">
+                            <h3 class="font-heading font-medium text-2xl">Concept & Planning</h3>
+                            <p class="font-body text-sm ">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Laboriosam quas consequuntur </p>
+                        </div>
+                    </div>
+
+                    <div class="feature flex gap-4 bg-black/85 rounded-xl p-5 ">
+                        <div>
+                            <img src="https://i.pinimg.com/1200x/87/3f/89/873f8928e27c13c03bb5862951ddb09a.jpg"
+                                class="rounded-lg aspect-sqaure w-50" alt="">
+
+                        </div>
+                        <div class=" text-white flex flex-col gap-2">
+                            <h3 class="font-heading font-medium text-2xl">Lorem, ipsum dolor.</h3>
+                            <p class="font-body text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Laboriosam quas consequuntur cumque?</p>
+                        </div>
+                    </div>
+                    <div class="feature flex gap-4 bg-black/85 rounded-xl p-5 ">
+                        <div>
+                            <img src="https://i.pinimg.com/736x/ae/68/b6/ae68b669e2b0ce0174ab9a70980f4cf9.jpg"
+                                class="rounded-lg aspect-sqaure w-50" alt="">
+
+                        </div>
+                        <div class=" text-white flex flex-col gap-2">
+                            <h3 class="font-heading font-medium text-2xl">Lorem, ipsum dolor.</h3>
+                            <p class="font-body text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Laboriosam quas consequuntur cumque?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
-        <div class=" text-white flex flex-col  gap-1 items-start justify-center ">
-            <h3 class="font-heading font-medium text-2xl">Concept & Planning</h3>
-            <p class="font-body text-sm ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quas consequuntur </p>
-        </div>
-    </div>
-
-    <div class="feature flex gap-4 bg-black/85 rounded-xl p-5 ">
-        <div>
-            <img src="https://i.pinimg.com/1200x/87/3f/89/873f8928e27c13c03bb5862951ddb09a.jpg" class="rounded-lg aspect-sqaure w-50" alt="">
-
-        </div>
-        <div class=" text-white flex flex-col gap-2">
-            <h3 class="font-heading font-medium text-2xl">Lorem, ipsum dolor.</h3>
-            <p class="font-body text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quas consequuntur cumque?</p>
-        </div>
-    </div>
-    <div class="feature flex gap-4 bg-black/85 rounded-xl p-5 ">
-        <div>
-            <img src="https://i.pinimg.com/736x/ae/68/b6/ae68b669e2b0ce0174ab9a70980f4cf9.jpg" class="rounded-lg aspect-sqaure w-50" alt="">
-
-        </div>
-        <div class=" text-white flex flex-col gap-2">
-            <h3 class="font-heading font-medium text-2xl">Lorem, ipsum dolor.</h3>
-            <p class="font-body text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quas consequuntur cumque?</p>
-        </div>
-    </div>
-</div> 
-</div>
-
-</div>
         <!-- project -->
-        <div class="py-16">
+        <div class=" px-5">
             <!-- heading -->
             <div class="flex flex-row gap-12  justify-between items-start w-full">
                 <div class="w-[50%]">
@@ -150,7 +161,8 @@
                                 </div>
                                 <div class="opacity-0 group-hover:opacity-100 transition duration-300 mt-3">
 
-                                    <p class="font-body text-white text-sm py-2 text-center">Lorem ipsum dolor sit amet, consectetur
+                                    <p class="font-body text-white text-sm py-2 text-center">Lorem ipsum dolor sit amet,
+                                        consectetur
                                         adipisicing elit. Cumque magni alias ipsam?</p>
                                     <!-- buttons -->
                                     <div class="flex items-center justify-center  gap-3 py-2 w-full">
@@ -181,7 +193,8 @@
                                 </div>
                                 <div class="opacity-0 group-hover:opacity-100 transition duration-300 mt-3">
 
-                                    <p class="font-body text-white text-sm py-2 text-center">Lorem ipsum dolor sit amet, consectetur
+                                    <p class="font-body text-white text-sm py-2 text-center">Lorem ipsum dolor sit amet,
+                                        consectetur
                                         adipisicing elit. Cumque magni alias ipsam?</p>
                                     <!-- buttons -->
                                     <div class="flex items-center justify-center  gap-3 py-2 w-full">
@@ -197,8 +210,8 @@
                         </div>
                     </div>
                 </div>
-<!-- coloumn-2   -->
-              <div class="flex flex-col col-span-2 h-full gap-3 ">
+                <!-- coloumn-2   -->
+                <div class="flex flex-col col-span-2 h-full gap-3 ">
                     <div class=" h-[60%]  relative group overflow-hidden rounded-3xl">
                         <div style="background-image: url(https://i.pinimg.com/1200x/a3/1f/d3/a31fd30764e7b6c3652bbcf30be59db9.jpg);"
                             class="w-full bg-cover bg-center rounded-3xl h-full group-hover:scale-105 transition transform duration-500 ease-in">
@@ -207,7 +220,8 @@
                             class=" w-full h-auto hover:bg-black/30 ease-in duration-300 transition-all rounded-2xl bg-linear-to-t from-black/90 from-0% via-black/40 via-25% to-transparent to-30% absolute inset-0 flex items-end justify-between py-3 ">
                             <div class="transform translate-y-1/2 group-hover:translate-y-0 transition duration-300">
                                 <div class="flex  justify-between items-center w-full">
-                                    <h1 class="text-3xl font-projects font-semibold  text-white"> Velvet Dusk Interiors</h1>
+                                    <h1 class="text-3xl font-projects font-semibold  text-white"> Velvet Dusk Interiors
+                                    </h1>
                                     <span class="  text-black bg-white rounded-full p-2 ">
                                         <ArrowUpRight
                                             class="hover:scale-125 transition-all ease-in duration-200 cursor-pointer" />
@@ -215,7 +229,8 @@
                                 </div>
                                 <div class="opacity-0 group-hover:opacity-100 transition duration-300 mt-3">
 
-                                    <p class="font-body text-white text-sm py-2 text-center">Lorem ipsum dolor sit amet, consectetur
+                                    <p class="font-body text-white text-sm py-2 text-center">Lorem ipsum dolor sit amet,
+                                        consectetur
                                         adipisicing elit. Cumque magni alias ipsam?</p>
                                     <!-- buttons -->
                                     <div class="flex items-center justify-center  gap-3 py-2 w-full">
@@ -231,69 +246,74 @@
                         </div>
                     </div>
                     <!-- row-2 -->
-                    <div class="h-[40%] flex  gap-5" >
-                    <div class=" w-full relative group overflow-hidden rounded-3xl">
-                        <div style="background-image: url(https://i.pinimg.com/736x/1e/8b/5e/1e8b5e3b25be07a2114d891185a2263d.jpg);"
-                            class="w-full bg-cover bg-center rounded-3xl h-full group-hover:scale-105 transition transform duration-500 ease-in">
-                        </div>
-                        <div
-                            class=" w-full h-auto hover:bg-black/30 ease-in duration-300 transition-all rounded-2xl bg-linear-to-t from-black/90 from-0% via-black/40 via-25% to-transparent to-30% absolute inset-0 flex items-end justify-between py-3 px-6">
-                            <div class="transform translate-y-[65%] group-hover:translate-y-0 transition duration-300">
-                                <div class="flex  justify-between items-center">
-                                    <h1 class="text-3xl font-projects font-semibold text-white">Coal & Concrete</h1>
-                                    <span class=" text-black bg-white rounded-full p-2 ">
-                                        <ArrowUpRight
-                                            class="hover:scale-125 transition-all ease-in duration-200 cursor-pointer" />
-                                    </span>
-                                </div>
-                                <div class="opacity-0 group-hover:opacity-100 transition duration-300 mt-3">
+                    <div class="h-[40%] flex  gap-5">
+                        <div class=" w-full relative group overflow-hidden rounded-3xl">
+                            <div style="background-image: url(https://i.pinimg.com/736x/1e/8b/5e/1e8b5e3b25be07a2114d891185a2263d.jpg);"
+                                class="w-full bg-cover bg-center rounded-3xl h-full group-hover:scale-105 transition transform duration-500 ease-in">
+                            </div>
+                            <div
+                                class=" w-full h-auto hover:bg-black/30 ease-in duration-300 transition-all rounded-2xl bg-linear-to-t from-black/90 from-0% via-black/40 via-25% to-transparent to-30% absolute inset-0 flex items-end justify-between py-3 px-6">
+                                <div
+                                    class="transform translate-y-[65%] group-hover:translate-y-0 transition duration-300">
+                                    <div class="flex  justify-between items-center">
+                                        <h1 class="text-3xl font-projects font-semibold text-white">Coal & Concrete</h1>
+                                        <span class=" text-black bg-white rounded-full p-2 ">
+                                            <ArrowUpRight
+                                                class="hover:scale-125 transition-all ease-in duration-200 cursor-pointer" />
+                                        </span>
+                                    </div>
+                                    <div class="opacity-0 group-hover:opacity-100 transition duration-300 mt-3">
 
-                                    <p class="font-body text-white text-sm py-2 text-center">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing elit. Cumque magni alias ipsam?</p>
-                                    <!-- buttons -->
-                                    <div class="flex items-center justify-center  gap-3 py-2 w-full">
-                                        <button
-                                            class="px-4 py-0.5 text-white border border-white rounded-full capitalize hover:bg-white/5 hover:scale-95 ease-in transition-all duration-100 cursor-pointer">view</button>
-                                        <button
-                                            class="px-4 py-0.5 text-white border border-white rounded-full capitalize hover:bg-white/5 hover:scale-95 ease-in transition-all duration-100 cursor-pointer">contact</button>
-                                        <button
-                                            class="px-4 py-0.5 text-white border border-white rounded-full capitalize hover:bg-white/5 hover:scale-95 ease-in transition-all duration-100 cursor-pointer">learn</button>
+                                        <p class="font-body text-white text-sm py-2 text-center">Lorem ipsum dolor sit
+                                            amet, consectetur
+                                            adipisicing elit. Cumque magni alias ipsam?</p>
+                                        <!-- buttons -->
+                                        <div class="flex items-center justify-center  gap-3 py-2 w-full">
+                                            <button
+                                                class="px-4 py-0.5 text-white border border-white rounded-full capitalize hover:bg-white/5 hover:scale-95 ease-in transition-all duration-100 cursor-pointer">view</button>
+                                            <button
+                                                class="px-4 py-0.5 text-white border border-white rounded-full capitalize hover:bg-white/5 hover:scale-95 ease-in transition-all duration-100 cursor-pointer">contact</button>
+                                            <button
+                                                class="px-4 py-0.5 text-white border border-white rounded-full capitalize hover:bg-white/5 hover:scale-95 ease-in transition-all duration-100 cursor-pointer">learn</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="w-full relative group overflow-hidden rounded-3xl">
-                        <div style="background-image: url(https://i.pinimg.com/736x/e4/fe/01/e4fe01b5a543853d5e88e67e0ea0a27a.jpg);"
-                            class="w-full bg-cover bg-center rounded-3xl h-full group-hover:scale-105 transition transform duration-500 ease-in">
-                        </div>
-                        <div
-                            class=" w-full h-auto hover:bg-black/30 ease-in duration-300 transition-all rounded-2xl bg-linear-to-t from-black/90 from-0% via-black/40 via-25% to-transparent to-30% absolute inset-0 flex items-end justify-between py-3 px-6">
-                            <div class="transform translate-y-[65%] group-hover:translate-y-0 transition duration-300">
-                                <div class="flex  justify-between items-center ">
-                                    <h1 class="text-3xl font-projects font-semibold  text-white">The Ember House </h1>
-                                    <span class="  text-black bg-white rounded-full p-2 ">
-                                        <ArrowUpRight
-                                            class="hover:scale-125 transition-all ease-in duration-200 cursor-pointer" />
-                                    </span>
-                                </div>
-                                <div class="opacity-0 group-hover:opacity-100 transition duration-300 mt-3">
+                        <div class="w-full relative group overflow-hidden rounded-3xl">
+                            <div style="background-image: url(https://i.pinimg.com/736x/e4/fe/01/e4fe01b5a543853d5e88e67e0ea0a27a.jpg);"
+                                class="w-full bg-cover bg-center rounded-3xl h-full group-hover:scale-105 transition transform duration-500 ease-in">
+                            </div>
+                            <div
+                                class=" w-full h-auto hover:bg-black/30 ease-in duration-300 transition-all rounded-2xl bg-linear-to-t from-black/90 from-0% via-black/40 via-25% to-transparent to-30% absolute inset-0 flex items-end justify-between py-3 px-6">
+                                <div
+                                    class="transform translate-y-[65%] group-hover:translate-y-0 transition duration-300">
+                                    <div class="flex  justify-between items-center ">
+                                        <h1 class="text-3xl font-projects font-semibold  text-white">The Ember House
+                                        </h1>
+                                        <span class="  text-black bg-white rounded-full p-2 ">
+                                            <ArrowUpRight
+                                                class="hover:scale-125 transition-all ease-in duration-200 cursor-pointer" />
+                                        </span>
+                                    </div>
+                                    <div class="opacity-0 group-hover:opacity-100 transition duration-300 mt-3">
 
-                                    <p class="font-body text-white text-sm py-2 text-center">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing elit. Cumque magni alias ipsam?</p>
-                                    <!-- buttons -->
-                                    <div class="flex items-center justify-center  gap-3 py-2 w-full">
-                                        <button
-                                            class="px-4 py-0.5 text-white border border-white rounded-full capitalize hover:bg-white/5 hover:scale-95 ease-in transition-all duration-100 cursor-pointer">view</button>
-                                        <button
-                                            class="px-4 py-0.5 text-white border border-white rounded-full capitalize hover:bg-white/5 hover:scale-95 ease-in transition-all duration-100 cursor-pointer">contact</button>
-                                        <button
-                                            class="px-4 py-0.5 text-white border border-white rounded-full capitalize hover:bg-white/5 hover:scale-95 ease-in transition-all duration-100 cursor-pointer">learn</button>
+                                        <p class="font-body text-white text-sm py-2 text-center">Lorem ipsum dolor sit
+                                            amet, consectetur
+                                            adipisicing elit. Cumque magni alias ipsam?</p>
+                                        <!-- buttons -->
+                                        <div class="flex items-center justify-center  gap-3 py-2 w-full">
+                                            <button
+                                                class="px-4 py-0.5 text-white border border-white rounded-full capitalize hover:bg-white/5 hover:scale-95 ease-in transition-all duration-100 cursor-pointer">view</button>
+                                            <button
+                                                class="px-4 py-0.5 text-white border border-white rounded-full capitalize hover:bg-white/5 hover:scale-95 ease-in transition-all duration-100 cursor-pointer">contact</button>
+                                            <button
+                                                class="px-4 py-0.5 text-white border border-white rounded-full capitalize hover:bg-white/5 hover:scale-95 ease-in transition-all duration-100 cursor-pointer">learn</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     </div>
                 </div>
                 <div class="flex flex-col h-full gap-3 ">
@@ -360,10 +380,29 @@
                         </div>
                     </div>
                 </div>
+
+
             </div>
         </div>
 
-      
+        <!-- stats section -->
+        <div class="px-5 pb-12 grid grid-cols-2">
+            <div class="w-full py-12 rounded-2xl  bg-linear-to-r from-black to-main">
+
+            </div>
+            <div class="py-12 px-6">
+                <span class="flex ">
+                    <h2 class="font-heading text-5xl font-bold capitalize ">Built on Detail and Intent</h2>
+                    <span class="flex flex-col items-center justify-center">
+                        <img class="max-w-[85px] aspect-square rounded-full" src="https://i.pinimg.com/736x/db/48/75/db4875081f8248aa02d8420912fcf84e.jpg" alt="">
+                        <span class="flex ">
+                            <img class="max-h-[60px] aspect-square rounded-full" src="https://i.pinimg.com/1200x/a0/c7/92/a0c79229e628d6dbdb7a287f0fc52e30.jpg" alt="">
+                            <img class="max-w-[70px] aspect-square rounded-full" src="https://i.pinimg.com/1200x/2e/49/30/2e4930b5171c169a9a8c1ffa4f504a9d.jpg" alt="">
+                        </span>
+                    </span>
+                </span>
+            </div>
+        </div>
     </div>
 
 
@@ -376,15 +415,15 @@ import approach from '../assets/approach.png'
 import gsap from 'gsap';
 import { onMounted } from 'vue';
 
-onMounted(()=>{
-gsap.from(".hero-title",{
-    y:-80,opacity:0,duration:1.2,ease:"power3.out"
-})
-gsap.from(".feature",{
-    y:100 , opacity:0,stagger:{
-        each:0.15,from:'center'
-    },ease:"power3.out" ,duration:1.2
-})
+onMounted(() => {
+    gsap.from(".hero-title", {
+        y: -80, opacity: 0, duration: 1.2, ease: "power3.out"
+    })
+    gsap.from(".feature", {
+        y: 100, opacity: 0, stagger: {
+            each: 0.15, from: 'center'
+        }, ease: "power3.out", duration: 1.2
+    })
 })
 </script>
 
