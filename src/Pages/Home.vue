@@ -499,9 +499,18 @@ Designed for Every Space
 
     </ul>
  </div>
-<div class="w-full">
- <div class="w-full bg-cover bg-center min-h-screen bg-no-repeat" style="background-image: url(https://i.pinimg.com/1200x/db/d4/0e/dbd40e1e15ef0938d132913e0f988c04.jpg);">
-
+<div class="w-full ">
+ <div class="w-full relative flex items-center justify-start bg-cover bg-center min-h-screen bg-no-repeat " style="background-image: url(https://i.pinimg.com/1200x/1e/6b/a2/1e6ba2c54b4b7333d8db9e3a43cda791.jpg);">
+    <div class="absolute inset-0  bg-linear-to-bl from-white/10 to-black/45"></div>
+ <div class=" bg-white/90 flex flex-col rounded-xl p-4 w-1/5 mx-12 z-[12]">
+    <img class="rounded-xl aspect-square" src="https://i.pinimg.com/736x/b0/5f/dd/b05fdd196a902ebb945f3f085458aa9b.jpg" alt="">
+    <div class="flex flex-col gap-1 py-2 ">
+        <h2 class="text-xl font-bold font-heading">Modern Living Room Design</h2>
+        <p class="text-xs font-body font-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni veritatis repudiandae id.</p>
+                        <button class="px-6 py-2 mt-1 cursor-pointer hover:bg-white hover:border-black border hover:text-black transition-all duration-300 ease-in
+                 bg-black text-white rounded-full">Learn More</button>
+    </div>
+ </div>
 
  </div>
  </div>
