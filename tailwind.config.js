@@ -3,7 +3,8 @@ export default{
         extend:{
             fontFamily:{
                 heading:['Merriweather', 'serif'],
-                body:["Poppins", 'sans-serif']
+                body:["Poppins", 'sans-serif'],
+                footer:[ "Cossette Texte", sans-serif]
             }
         }
     }
