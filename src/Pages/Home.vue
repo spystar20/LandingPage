@@ -1,4 +1,49 @@
+<script setup>
+import { ArrowUpRight,ArrowLeft, PenTool } from 'lucide-vue-next';
+import approach from '../assets/approach.png'
+import gsap from 'gsap';
+import { onMounted } from 'vue';
 
+onMounted(() => {
+    gsap.from(".hero-title", {
+        y: -80, opacity: 0, duration: 1.2, ease: "power3.out"
+    })
+    gsap.from(".feature", {
+        y: 100, opacity: 0, stagger: {
+            each: 0.15, from: 'center'
+        }, ease: "power3.out", duration: 1.2
+    })
+})
+
+
+
+const Col1 = [
+   {id:1,
+        img:'https://i.pinimg.com/1200x/ac/61/19/ac61196521cec3df1e94987c0b176b79.jpg',
+        title:'Obsidian Living',
+        height:"40%"
+        
+    },
+    {id:2,
+        img:'https://i.pinimg.com/1200x/d9/bc/a3/d9bca3639c17c89bff02fed826effd28.jpg',
+        title:'Noir Nest',
+        height:'60%'
+    }]
+    const Col2 = [
+        
+   {id:1,
+        img:'https://i.pinimg.com/736x/05/4d/e6/054de67c4ed18ebfc5a6def03aa6c957.jpg',
+        title:'Midnight Haven',
+        height:'40%'
+        
+    },
+    {id:2,
+        img:'https://i.pinimg.com/736x/6c/3b/98/6c3b98387420fe48520ffec55e887aa6.jpg',
+        title:' Ebon Space',
+        height:'60%'
+    }
+    ]
+</script>
 
 <template>
     <div class="w-full min-h-screen  flex flex-col gap-10 ">
@@ -144,49 +189,16 @@
             </div>
 
             <div class="grid grid-cols-4 gap-5 py-10 w-full min-h-screen">
-                <!-- coloumn-1 -->
-                <div class="flex flex-col h-full gap-3 ">
-                    <div class=" h-[40%]  relative group overflow-hidden rounded-3xl">
-                        <div style="background-image: url(https://i.pinimg.com/1200x/ac/61/19/ac61196521cec3df1e94987c0b176b79.jpg);"
+                <div  class="flex flex-col h-full gap-3 ">
+                    <div :key="item.id" v-for="item in Col1" :style="{height:item.height}" class="   relative group overflow-hidden rounded-3xl">
+                        <div :style='{backgroundImage: `url(${item.img})`}'
                             class="w-full bg-cover bg-center rounded-3xl h-full group-hover:scale-105 transition transform duration-500 ease-in">
                         </div>
                         <div
                             class=" w-full h-auto hover:bg-black/30 ease-in duration-300 transition-all rounded-2xl bg-linear-to-t from-black/90 from-0% via-black/40 via-25% to-transparent to-30% absolute inset-0 flex items-end justify-between py-3 px-6">
                             <div class="transform translate-y-[65%] group-hover:translate-y-0 transition duration-300">
                                 <div class="flex  justify-between items-center ">
-                                    <h1 class="text-3xl font-projects font-semibold  text-white">Obsidian Living</h1>
-                                    <span class="  text-black bg-white rounded-full p-2 ">
-                                        <ArrowUpRight
-                                            class="hover:scale-125 transition-all ease-in duration-200 cursor-pointer" />
-                                    </span>
-                                </div>
-                                <div class="opacity-0 group-hover:opacity-100 transition duration-300 mt-3">
-
-                                    <p class="font-body text-white text-sm py-2 text-center">Lorem ipsum dolor sit amet,
-                                        consectetur
-                                        adipisicing elit. Cumque magni alias ipsam?</p>
-                                    <!-- buttons -->
-                                    <div class="flex items-center justify-center  gap-3 py-2 w-full">
-                                        <button
-                                            class="px-4 py-0.5 text-white border border-white rounded-full capitalize hover:bg-white/5 hover:scale-95 ease-in transition-all duration-100 cursor-pointer">view</button>
-                                        <button
-                                            class="px-4 py-0.5 text-white border border-white rounded-full capitalize hover:bg-white/5 hover:scale-95 ease-in transition-all duration-100 cursor-pointer">contact</button>
-                                        <button
-                                            class="px-4 py-0.5 text-white border border-white rounded-full capitalize hover:bg-white/5 hover:scale-95 ease-in transition-all duration-100 cursor-pointer">learn</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=" h-[60%]  relative group overflow-hidden rounded-3xl">
-                        <div style="background-image: url(https://i.pinimg.com/1200x/d9/bc/a3/d9bca3639c17c89bff02fed826effd28.jpg);"
-                            class="w-full bg-cover bg-center rounded-3xl h-full group-hover:scale-105 transition transform duration-500 ease-in">
-                        </div>
-                        <div
-                            class=" w-full h-auto hover:bg-black/30 ease-in duration-300 transition-all rounded-2xl bg-linear-to-t from-black/90 from-0% via-black/40 via-25% to-transparent to-30% absolute inset-0 flex items-end justify-between py-3 px-6">
-                            <div class="transform translate-y-[65%] group-hover:translate-y-0 transition duration-300">
-                                <div class="flex  justify-between items-center ">
-                                    <h1 class="text-3xl font-projects font-semibold  text-white"> Noir Nest</h1>
+                                    <h1 class="text-3xl font-projects font-semibold  text-white">{{ item.title }}</h1>
                                     <span class="  text-black bg-white rounded-full p-2 ">
                                         <ArrowUpRight
                                             class="hover:scale-125 transition-all ease-in duration-200 cursor-pointer" />
@@ -218,7 +230,7 @@
                             class="w-full bg-cover bg-center rounded-3xl h-full group-hover:scale-105 transition transform duration-500 ease-in">
                         </div>
                         <div
-                            class=" w-full h-auto hover:bg-black/30 ease-in duration-300 transition-all rounded-2xl bg-linear-to-t from-black/90 from-0% via-black/40 via-25% to-transparent to-30% absolute inset-0 flex items-end justify-between py-3 ">
+                            class=" w-full h-auto hover:bg-black/30 ease-in duration-300 transition-all rounded-2xl bg-linear-to-t from-black/90 from-0% via-black/40 via-25% to-transparent to-30% absolute inset-0 flex items-end justify-center  py-3 ">
                             <div class="transform translate-y-1/2 group-hover:translate-y-0 transition duration-300">
                                 <div class="flex  justify-between items-center w-full">
                                     <h1 class="text-3xl font-projects font-semibold  text-white"> Velvet Dusk Interiors
@@ -318,15 +330,15 @@
                     </div>
                 </div>
                 <div class="flex flex-col h-full gap-3 ">
-                    <div class=" h-[40%]  relative group overflow-hidden rounded-3xl">
-                        <div style="background-image: url(https://i.pinimg.com/736x/6c/3b/98/6c3b98387420fe48520ffec55e887aa6.jpg);"
+                    <div v-for="item in Col2" :key="item.id" :style="{height:item.height}" class="  relative group overflow-hidden rounded-3xl">
+                        <div :style="{backgroundImage:`url(${item.img})`}"
                             class="w-full bg-cover bg-center rounded-3xl h-full group-hover:scale-105 transition transform duration-500 ease-in">
                         </div>
                         <div
                             class=" w-full h-auto hover:bg-black/30 ease-in duration-300 transition-all rounded-2xl bg-linear-to-t from-black/90 from-0% via-black/40 via-25% to-transparent to-30% absolute inset-0 flex items-end justify-between py-3 px-6">
                             <div class="transform translate-y-1/2 group-hover:translate-y-0 transition duration-300">
                                 <div class="flex  justify-between items-center ">
-                                    <h1 class="text-3xl font-projects font-semibold  text-white"> Ebon Space </h1>
+                                    <h1 class="text-3xl font-projects font-semibold  text-white">{{ item.title }} </h1>
                                     <span class="  text-black bg-white rounded-full p-2 ">
                                         <ArrowUpRight
                                             class="hover:scale-125 transition-all ease-in duration-200 cursor-pointer" />
@@ -349,37 +361,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class=" h-[60%]  relative group overflow-hidden rounded-3xl">
-                        <div style="background-image: url(https://i.pinimg.com/736x/05/4d/e6/054de67c4ed18ebfc5a6def03aa6c957.jpg);"
-                            class="w-full bg-cover bg-center rounded-3xl h-full group-hover:scale-105 transition transform duration-500 ease-in">
-                        </div>
-                        <div
-                            class=" w-full h-auto hover:bg-black/30 ease-in duration-300 transition-all rounded-2xl bg-linear-to-t from-black/90 from-0% via-black/40 via-25% to-transparent to-30% absolute inset-0 flex items-end justify-between py-3 px-6">
-                            <div class="transform translate-y-1/2 group-hover:translate-y-0 transition duration-300">
-                                <div class="flex  justify-between items-center ">
-                                    <h1 class="text-3xl font-projects font-semibold  text-white">Midnight Haven </h1>
-                                    <span class="  text-black bg-white rounded-full p-2 ">
-                                        <ArrowUpRight
-                                            class="hover:scale-125 transition-all ease-in duration-200 cursor-pointer" />
-                                    </span>
-                                </div>
-                                <div class="opacity-0 group-hover:opacity-100 transition duration-300 mt-3">
-
-                                    <p class="font-body text-white text-sm py-2">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing elit. Cumque magni alias ipsam?</p>
-                                    <!-- buttons -->
-                                    <div class="flex items-center justify-center  gap-3 py-2 w-full">
-                                        <button
-                                            class="px-4 py-0.5 text-white border border-white rounded-full capitalize hover:bg-white/5 hover:scale-95 ease-in transition-all duration-100 cursor-pointer">view</button>
-                                        <button
-                                            class="px-4 py-0.5 text-white border border-white rounded-full capitalize hover:bg-white/5 hover:scale-95 ease-in transition-all duration-100 cursor-pointer">contact</button>
-                                        <button
-                                            class="px-4 py-0.5 text-white border border-white rounded-full capitalize hover:bg-white/5 hover:scale-95 ease-in transition-all duration-100 cursor-pointer">learn</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                
                 </div>
 
 
@@ -525,22 +507,6 @@ Designed for Every Space
 
 </template>
 
-<script setup>
-import { ArrowUpRight,ArrowLeft, PenTool } from 'lucide-vue-next';
-import approach from '../assets/approach.png'
-import gsap from 'gsap';
-import { onMounted } from 'vue';
 
-onMounted(() => {
-    gsap.from(".hero-title", {
-        y: -80, opacity: 0, duration: 1.2, ease: "power3.out"
-    })
-    gsap.from(".feature", {
-        y: 100, opacity: 0, stagger: {
-            each: 0.15, from: 'center'
-        }, ease: "power3.out", duration: 1.2
-    })
-})
-</script>
 
-<style lang="scss" scoped></style>
+<style  scoped></style>
