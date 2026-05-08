@@ -1,5 +1,5 @@
 <template>
-    <div class="px-5 flex justify-between items-center-safe text-gray-800 font-medium w-full  py-5 text-lg  capitalize ">
+    <div  class="px-5 hidden md:flex justify-between items-center-safe text-gray-800 font-medium w-full  py-5 text-lg  capitalize ">
         <div>
            <h2 class="text-4xl font-bold text-main uppercase">spaceaura</h2>
         </div>
@@ -12,10 +12,16 @@
         </ul>
       
     </div>
+
+    <div class="px-5 md:hidden flex justify-between items-center-safe text-gray-800 font-medium w-full  py-5 text-lg  capitalize " >
+
+           <h2 class="text-4xl font-bold text-main uppercase">spaceaura</h2>
+        <MenuIcon class="w-5 h-5"/>
+</div>
 </template>
 
 <script setup>
-
+import { MenuIcon } from 'lucide-vue-next';
 </script>
 
 <style lang="scss" scoped>

@@ -1,10 +1,10 @@
 <script setup>
-import { ArrowUpRight,ArrowLeft, PenTool } from 'lucide-vue-next';
+import { ArrowUpRight, ArrowLeft, PenTool } from 'lucide-vue-next';
 import approach from '../assets/approach.png'
 import gsap from 'gsap';
 import { onMounted } from 'vue';
 import ProjectCard from '../components/ProjectCard.vue';
-
+import { Col1,Col2 } from '../data/Project';
 onMounted(() => {
     gsap.from(".hero-title", {
         y: -80, opacity: 0, duration: 1.2, ease: "power3.out"
@@ -18,32 +18,6 @@ onMounted(() => {
 
 
 
-const Col1 = [
-   {id:1,
-        img:'https://i.pinimg.com/1200x/ac/61/19/ac61196521cec3df1e94987c0b176b79.jpg',
-        title:'Obsidian Living',
-        height:"40%"
-        
-    },
-    {id:2,
-        img:'https://i.pinimg.com/1200x/d9/bc/a3/d9bca3639c17c89bff02fed826effd28.jpg',
-        title:'Noir Nest',
-        height:'60%'
-    }]
-    const Col2 = [
-        
-   {id:1,
-        img:'https://i.pinimg.com/736x/05/4d/e6/054de67c4ed18ebfc5a6def03aa6c957.jpg',
-        title:'Midnight Haven',
-        height:'40%'
-        
-    },
-    {id:2,
-        img:'https://i.pinimg.com/736x/6c/3b/98/6c3b98387420fe48520ffec55e887aa6.jpg',
-        title:' Ebon Space',
-        height:'60%'
-    }
-    ]
 </script>
 
 <template>
@@ -61,7 +35,8 @@ const Col1 = [
                             adipisicing elit. Obcaecati animi explicabo maiores placeat labore alias, a error quis, qui
                             quia quas.</p>
                         <div>
-                            <button class=" border border-white hover:text-white   hover:bg-[#645a4e] hover:border-main font-body font-medium px-8 py-3 rounded-lg cursor-pointer hover:scale-105 scale-100 ease-linear duration-150">Get
+                            <button
+                                class=" border border-white hover:text-white   hover:bg-[#645a4e] hover:border-main font-body font-medium px-8 py-3 rounded-lg cursor-pointer hover:scale-105 scale-100 ease-linear duration-150">Get
                                 Started</button>
                         </div>
                     </div>
@@ -190,8 +165,8 @@ const Col1 = [
             </div>
 
             <div class="grid grid-cols-4 gap-5 py-10 w-full min-h-screen">
-                <div  class="flex flex-col h-full gap-3 ">
-                   <ProjectCard v-for="item in Col1" :key="item.id" :project="item"/>
+                <div class="flex flex-col h-full gap-3 ">
+                    <ProjectCard v-for="item in Col1" :key="item.id" :project="item" />
                 </div>
                 <!-- coloumn-2   -->
                 <div class="flex flex-col col-span-2 h-full gap-3 ">
@@ -300,8 +275,8 @@ const Col1 = [
                     </div>
                 </div>
                 <div class="flex flex-col h-full gap-3 ">
-              
-                                   <ProjectCard v-for="item in Col2" :key="item.id" :project="item"/>
+
+                    <ProjectCard v-for="item in Col2" :key="item.id" :project="item" />
 
                 </div>
 
@@ -311,53 +286,73 @@ const Col1 = [
 
         <!-- stats section -->
         <div class="px-5 pb-12 grid grid-cols-2 gap-6">
-            <div class="w-full  p-6 items-center gap-5 rounded-2xl  bg-linear-to-b from-black to-main text-gray-100 grid grid-cols-2">
-<div class="flex flex-col gap-8 mb-16">
-<div class=" border-gray-200/20 border rounded-2xl flex flex-col gap-3 p-5 bg-white/5 backdrop-blur-md transition duration-300 hover:bg-white/10">
-    <div class="flex items-center gap-3">
-        <PenTool class="text-white w-6 h-6 opacity-80"/>
-        <h2 class="text-xl font-semibold ">Bespoke Concepts</h2></div>
-    <p class="text-sm font-body  text-gray-300 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores necessitatibus t Lorem ipsum dolor sit amet.</p>
-</div>
-<div class=" border-gray-200/20 border rounded-2xl flex flex-col gap-3 p-5 bg-white/5 backdrop-blur-md transition duration-300 hover:bg-white/10">
-    <div class="flex items-center gap-3">
-        <PenTool class="text-white w-6 h-6 opacity-80"/>
-        <h2 class="text-xl font-semibold ">Bespoke Concepts</h2></div>
-    <P class="text-sm font-body  text-gray-300 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores necessitatibus t Lorem ipsum dolor sit amet.</P>
-</div>
-<div class=" border-gray-200/20 border rounded-2xl flex flex-col gap-3 p-5 bg-white/5 backdrop-blur-md transition duration-300 hover:bg-white/10">
-    <div class="flex items-center gap-3">
-        <PenTool class="text-white w-6 h-6 opacity-80"/>
-        <h2 class="text-xl font-semibold ">Bespoke Concepts</h2></div>
-    <P class="text-sm font-body  text-gray-300 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores necessitatibus t Lorem ipsum dolor sit amet.</P>
-</div>
-</div>
-<div class="flex flex-col gap-8 mt-16">
-<div class=" border-gray-200/20 border rounded-2xl flex flex-col gap-3 p-5 bg-white/5 backdrop-blur-md transition duration-300 hover:bg-white/10">
-    <div class="flex items-center gap-3">
-        <PenTool class="text-white w-6 h-6 opacity-80"/>
-        <h2 class="text-xl font-semibold ">Bespoke Concepts</h2></div>
-    <P class="text-sm font-body  text-gray-300 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores necessitatibus t Lorem ipsum dolor sit amet.</P>
-</div>
-<div class=" border-gray-200/20 border rounded-2xl flex flex-col gap-3 p-5 bg-white/5 backdrop-blur-md transition duration-300 hover:bg-white/10">
-    <div class="flex items-center gap-3">
-        <PenTool class="text-white w-6 h-6 opacity-80"/>
-        <h2 class="text-xl font-semibold ">Bespoke Concepts</h2></div>
-    <P class="text-sm font-body  text-gray-300 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores necessitatibus t Lorem ipsum dolor sit amet.</P>
-</div>
-<div class=" border-gray-200/20 border rounded-2xl flex flex-col gap-3 p-5 bg-white/5 backdrop-blur-md transition duration-300 hover:bg-white/10">
-    <div class="flex items-center gap-3">
-        <PenTool class="text-white w-6 h-6 opacity-80"/>
-        <h2 class="text-xl font-semibold ">Bespoke Concepts</h2></div>
-    <P class="text-sm font-body  text-gray-300 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores necessitatibus t Lorem ipsum dolor sit amet.</P>
-</div>
-</div>
+            <div
+                class="w-full  p-6 items-center gap-5 rounded-2xl  bg-linear-to-b from-black to-main text-gray-100 grid grid-cols-2">
+                <div class="flex flex-col gap-8 mb-16">
+                    <div
+                        class=" border-gray-200/20 border rounded-2xl flex flex-col gap-3 p-5 bg-white/5 backdrop-blur-md transition duration-300 hover:bg-white/10">
+                        <div class="flex items-center gap-3">
+                            <PenTool class="text-white w-6 h-6 opacity-80" />
+                            <h2 class="text-xl font-semibold ">Bespoke Concepts</h2>
+                        </div>
+                        <p class="text-sm font-body  text-gray-300 leading-relaxed">Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Asperiores necessitatibus t Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div
+                        class=" border-gray-200/20 border rounded-2xl flex flex-col gap-3 p-5 bg-white/5 backdrop-blur-md transition duration-300 hover:bg-white/10">
+                        <div class="flex items-center gap-3">
+                            <PenTool class="text-white w-6 h-6 opacity-80" />
+                            <h2 class="text-xl font-semibold ">Bespoke Concepts</h2>
+                        </div>
+                        <p class="text-sm font-body  text-gray-300 leading-relaxed">Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Asperiores necessitatibus t Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div
+                        class=" border-gray-200/20 border rounded-2xl flex flex-col gap-3 p-5 bg-white/5 backdrop-blur-md transition duration-300 hover:bg-white/10">
+                        <div class="flex items-center gap-3">
+                            <PenTool class="text-white w-6 h-6 opacity-80" />
+                            <h2 class="text-xl font-semibold ">Bespoke Concepts</h2>
+                        </div>
+                        <p class="text-sm font-body  text-gray-300 leading-relaxed">Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Asperiores necessitatibus t Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-8 mt-16">
+                    <div
+                        class=" border-gray-200/20 border rounded-2xl flex flex-col gap-3 p-5 bg-white/5 backdrop-blur-md transition duration-300 hover:bg-white/10">
+                        <div class="flex items-center gap-3">
+                            <PenTool class="text-white w-6 h-6 opacity-80" />
+                            <h2 class="text-xl font-semibold ">Bespoke Concepts</h2>
+                        </div>
+                        <p class="text-sm font-body  text-gray-300 leading-relaxed">Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Asperiores necessitatibus t Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div
+                        class=" border-gray-200/20 border rounded-2xl flex flex-col gap-3 p-5 bg-white/5 backdrop-blur-md transition duration-300 hover:bg-white/10">
+                        <div class="flex items-center gap-3">
+                            <PenTool class="text-white w-6 h-6 opacity-80" />
+                            <h2 class="text-xl font-semibold ">Bespoke Concepts</h2>
+                        </div>
+                        <p class="text-sm font-body  text-gray-300 leading-relaxed">Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Asperiores necessitatibus t Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div
+                        class=" border-gray-200/20 border rounded-2xl flex flex-col gap-3 p-5 bg-white/5 backdrop-blur-md transition duration-300 hover:bg-white/10">
+                        <div class="flex items-center gap-3">
+                            <PenTool class="text-white w-6 h-6 opacity-80" />
+                            <h2 class="text-xl font-semibold ">Bespoke Concepts</h2>
+                        </div>
+                        <p class="text-sm font-body  text-gray-300 leading-relaxed">Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Asperiores necessitatibus t Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
             </div>
             <div class=" px-3 box-border w-full flex flex-col justify-end items-end-safe gap-4">
                 <!-- heading -->
                 <div class="flex flex-col items-end w-full gap-4 ">
 
-                    <h2 class=" flex flex-wrap justify-end font-heading text-5xl font-semibold capitalize gap-x-4  leading-tight ">
+                    <h2
+                        class=" flex flex-wrap justify-end font-heading text-5xl font-semibold capitalize gap-x-4  leading-tight ">
                         <span class="text-center">Where Detail Shapes</span>
                         <div class="flex gap-4"><span class="italic  ">Meaningful</span> <img
                                 class="w-40  h-20 object-cover  rounded-full"
@@ -365,80 +360,100 @@ const Col1 = [
                         </div>
                         <span class="italic"> Design </span>
                     </h2>
-                    <h6 class="capitalize font-body font-bold flex items-center gap-2 "><ArrowLeft class="w-5 text-black" /><span class=" h-[0.5px] bg-black w-50"></span>inside the process</h6>
+                    <h6 class="capitalize font-body font-bold flex items-center gap-2 ">
+                        <ArrowLeft class="w-5 text-black" /><span class=" h-[0.5px] bg-black w-50"></span>inside the
+                        process
+                    </h6>
 
-                  <div class="flex items-end flex-row-reverse gap-3 ">  
-                    <p class=" w-[65%] text-xs font-body  text-end">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde rem accusamus, fuga saepe aut eos optio repudiandae Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt enim facere architecto.
-                    </p>
-                <button class="px-6 py-2 cursor-pointer hover:bg-white hover:border-black border hover:text-black transition-all duration-300 ease-in
-                 bg-black text-white rounded-full">Learn More</button></div>
+                    <div class="flex items-end flex-row-reverse gap-3 ">
+                        <p class=" w-[65%] text-xs font-body  text-end">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde rem accusamus, fuga saepe aut
+                            eos optio repudiandae Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt enim
+                            facere architecto.
+                        </p>
+                        <button class="px-6 py-2 cursor-pointer hover:bg-white hover:border-black border hover:text-black transition-all duration-300 ease-in
+                 bg-black text-white rounded-full">Learn More</button>
+                    </div>
                 </div>
-<!-- stat -->
- <div class="flex gap-4 py-6">
-    <div class="flex flex-col items-center  gap-1 px-6 ">
-        <h2 class="text-4xl font-bold font-projects">150+</h2>
-        <p class="text-base font-medium">Curated Interiors</p>
-    </div>
-    <span class="w-[0.5px] h-5 bg-gray-400 flex self-center"></span>
- <div class="flex flex-col items-center  gap-1 px-6 ">
-        <h2 class="text-4xl font-bold font-projects">50+</h2>
-        <p class="text-base font-medium">Happy Customers</p>
-    </div>
-    <span class="w-[0.5px] h-5 bg-gray-400 flex self-center"></span>
-    <div class="flex flex-col items-center  gap-1 px-6 ">
-        <h2 class="text-4xl font-bold font-projects">10+</h2>
-        <p class="text-base font-medium">Industry Expertise</p>
-    </div>
- </div>
- <div class="w-full">
-    <img class="rounded-2xl h-[280px] object-cover w-full" src="https://i.pinimg.com/1200x/e5/b0/c7/e5b0c7297721a4be2f3e258a3afc5587.jpg" alt="">
- </div>
+                <!-- stat -->
+                <div class="flex gap-4 py-6">
+                    <div class="flex flex-col items-center  gap-1 px-6 ">
+                        <h2 class="text-4xl font-bold font-projects">150+</h2>
+                        <p class="text-base font-medium">Curated Interiors</p>
+                    </div>
+                    <span class="w-[0.5px] h-5 bg-gray-400 flex self-center"></span>
+                    <div class="flex flex-col items-center  gap-1 px-6 ">
+                        <h2 class="text-4xl font-bold font-projects">50+</h2>
+                        <p class="text-base font-medium">Happy Customers</p>
+                    </div>
+                    <span class="w-[0.5px] h-5 bg-gray-400 flex self-center"></span>
+                    <div class="flex flex-col items-center  gap-1 px-6 ">
+                        <h2 class="text-4xl font-bold font-projects">10+</h2>
+                        <p class="text-base font-medium">Industry Expertise</p>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <img class="rounded-2xl h-[280px] object-cover w-full"
+                        src="https://i.pinimg.com/1200x/e5/b0/c7/e5b0c7297721a4be2f3e258a3afc5587.jpg" alt="">
+                </div>
             </div>
 
         </div>
 
-<!-- Designed for Every Space -->
- <div class="p-12 flex gap-3">
-    <div class="max-w-1/4 flex flex-col gap-4 " >
-    <h2 class="font-bold font-heading text-5xl bg-linear-to-r from-black to-main text-transparent bg-clip-text ">
-Designed for Every Space
-    </h2>
-<p class="text-xs font-medium font-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas magni enim sunt, iusto totam mollitia tempore nisi ad quos expedita! Ipsa, error quas.</p>
-  <button class="px-6 py-2 cursor-pointer hover:bg-white hover:border-black border hover:text-black transition-all duration-300 ease-in
+        <!-- Designed for Every Space -->
+        <div class="p-12 flex gap-3">
+            <div class="max-w-1/4 flex flex-col gap-4 ">
+                <h2
+                    class="font-bold font-heading text-5xl bg-linear-to-r from-black to-main text-transparent bg-clip-text ">
+                    Designed for Every Space
+                </h2>
+                <p class="text-xs font-medium font-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Voluptas magni enim sunt, iusto totam mollitia tempore nisi ad quos expedita! Ipsa, error quas.</p>
+                <button class="px-6 py-2 cursor-pointer hover:bg-white hover:border-black border hover:text-black transition-all duration-300 ease-in
                  bg-black text-white rounded-full w-1/2">Learn More</button>
-</div>
-    <ul class="flex flex-col gap-2 flex-1">
-        <li class="  text-2xl font-medium font-body border-y-[0.2px] border-y-gray-700 py-4 w-full px-8 flex items-center justify-between">
-            Modern Living Rooms  <ArrowLeft class="w-5  rotate-130 text-black "/>
-        </li>
-        <li class="  text-2xl font-medium font-body border-y-[0.2px] border-y-gray-700 py-4 w-full px-8 flex items-center justify-between">
-            Modern Living Rooms  <ArrowLeft class="w-5  rotate-130 text-black "/>
-        </li>
-        <li class="  text-2xl font-medium font-body border-y-[0.2px] border-y-gray-700 py-4 w-full px-8 flex items-center justify-between">
-            Modern Living Rooms  <ArrowLeft class="w-5  rotate-130 text-black "/>
-        </li>
-        <li class="  text-2xl font-medium font-body border-y-[0.2px] border-y-gray-700 py-4 w-full px-8 flex items-center justify-between">
-            Modern Living Rooms  <ArrowLeft class="w-5  rotate-130 text-black "/>
-        </li>
+            </div>
+            <ul class="flex flex-col gap-2 flex-1">
+                <li
+                    class="  text-2xl font-medium font-body border-y-[0.2px] border-y-gray-700 py-4 w-full px-8 flex items-center justify-between">
+                    Modern Living Rooms
+                    <ArrowLeft class="w-5  rotate-130 text-black " />
+                </li>
+                <li
+                    class="  text-2xl font-medium font-body border-y-[0.2px] border-y-gray-700 py-4 w-full px-8 flex items-center justify-between">
+                    Modern Living Rooms
+                    <ArrowLeft class="w-5  rotate-130 text-black " />
+                </li>
+                <li
+                    class="  text-2xl font-medium font-body border-y-[0.2px] border-y-gray-700 py-4 w-full px-8 flex items-center justify-between">
+                    Modern Living Rooms
+                    <ArrowLeft class="w-5  rotate-130 text-black " />
+                </li>
+                <li
+                    class="  text-2xl font-medium font-body border-y-[0.2px] border-y-gray-700 py-4 w-full px-8 flex items-center justify-between">
+                    Modern Living Rooms
+                    <ArrowLeft class="w-5  rotate-130 text-black " />
+                </li>
 
-    </ul>
- </div>
-<div class="w-full ">
- <div class="w-full relative flex items-center justify-start bg-cover bg-center min-h-screen bg-no-repeat " style="background-image: url(https://i.pinimg.com/1200x/1e/6b/a2/1e6ba2c54b4b7333d8db9e3a43cda791.jpg);">
-    <div class="absolute inset-0  bg-linear-to-bl from-white/10 to-black/45"></div>
- <div class=" bg-white/90 flex flex-col rounded-xl p-4 w-1/5 mx-12 z-[12]">
-    <img class="rounded-xl aspect-square" src="https://i.pinimg.com/736x/b0/5f/dd/b05fdd196a902ebb945f3f085458aa9b.jpg" alt="">
-    <div class="flex flex-col gap-1 py-2 ">
-        <h2 class="text-xl font-bold font-heading">Modern Living Room Design</h2>
-        <p class="text-xs font-body font-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni veritatis repudiandae id.</p>
+            </ul>
+        </div>
+        <div class="w-full ">
+            <div class="w-full relative flex items-center justify-start bg-cover bg-center min-h-screen bg-no-repeat "
+                style="background-image: url(https://i.pinimg.com/1200x/1e/6b/a2/1e6ba2c54b4b7333d8db9e3a43cda791.jpg);">
+                <div class="absolute inset-0  bg-linear-to-bl from-white/10 to-black/45"></div>
+                <div class=" bg-white/90 flex flex-col rounded-xl p-4 w-1/5 mx-12 z-[12]">
+                    <img class="rounded-xl aspect-square"
+                        src="https://i.pinimg.com/736x/b0/5f/dd/b05fdd196a902ebb945f3f085458aa9b.jpg" alt="">
+                    <div class="flex flex-col gap-1 py-2 ">
+                        <h2 class="text-xl font-bold font-heading">Modern Living Room Design</h2>
+                        <p class="text-xs font-body font-normal">Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Magni veritatis repudiandae id.</p>
                         <button class="px-6 py-2 mt-1 cursor-pointer hover:bg-white hover:border-black border hover:text-black transition-all duration-300 ease-in
                  bg-black text-white rounded-full">Learn More</button>
-    </div>
- </div>
+                    </div>
+                </div>
 
- </div>
- </div>
+            </div>
+        </div>
 
 
 
@@ -450,4 +465,4 @@ Designed for Every Space
 
 
 
-<style  scoped></style>
+<style scoped></style>
