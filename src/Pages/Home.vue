@@ -17,7 +17,6 @@ onMounted(() => {
 })
 
 
-
 </script>
 
 <template>
@@ -46,9 +45,9 @@ onMounted(() => {
             </div>
         </div>
         <!-- about -->
-        <div class="p-5 flex flex-row gap-8 ">
+        <div class="p-5 flex flex-col md:flex-row gap-8 ">
             <!-- col-1 -->
-            <div class="w-[70%] ">
+            <div class="flex-7 ">
                 <div style="background-image: url(https://i.pinimg.com/1200x/5d/2f/b8/5d2fb87f8c6aacb1d930e01e401f8a05.jpg
 );" class="bg-black rounded-4xl bg-center bg-cover  h-screen flex flex-col items-start  justify-end ">
                     <div
@@ -70,7 +69,7 @@ onMounted(() => {
                 </div>
             </div>
             <!-- col-2 -->
-            <div class="w-[30%] grid grid-rows-2 gap-6">
+            <div class="flex-3 grid grid-rows-2 gap-6">
 
                 <div
                     class="flex flex-col items-start justify-center gap-3 font-body  rounded-4xl bg-linear-120 from-black to-main text-white p-5">
@@ -89,7 +88,7 @@ onMounted(() => {
         </div>
         <!-- approach -->
         <div class="p-5">
-            <div class=" w-full rounded-3xl bg-gray-100 px-6 py-20 grid grid-cols-2 ">
+            <div class=" w-full rounded-3xl bg-gray-100 px-6 py-20 grid grid-cols-1 md:grid-cols-2 ">
                 <div class="flex flex-col gap-6 ">
                     <h1 class="font-heading text-5xl font-semibold ">Elevating Everyday Spaces</h1>
                     <p class="font-body font-normal text-sm text-gray-700 w-[86%]">Lorem ipsum dolor sit amet
@@ -100,7 +99,7 @@ onMounted(() => {
                 </div>
                 <!-- Material & Texture -->
                 <!-- Lighting & Atmosphere -->
-                <div class="flex flex-col gap-5 items-center justify-center px-12 w-[85%]">
+                <div class="flex flex-col gap-5 items-center justify-center mt-5 px-12 w-[85%]">
                     <div
                         class="feature flex gap-4 bg-linear-to-t from-main to-black  hover:bg-black rounded-xl p-4 group">
                         <div class=" transition-all duration-300 ease-out">
@@ -164,13 +163,13 @@ onMounted(() => {
                 </div>
             </div>
 
-            <div class="grid grid-cols-4 gap-5 py-10 w-full min-h-screen">
-                <div class="flex flex-col h-full gap-3 ">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-5 py-10 w-full min-h-screen">
+                <div class="grid grid-cols-2 md:grid-cols-1 h-full gap-3 ">
                     <ProjectCard v-for="item in Col1" :key="item.id" :project="item" />
                 </div>
                 <!-- coloumn-2   -->
-                <div class="flex flex-col col-span-2 h-full gap-3 ">
-                    <div class=" h-[60%]  relative group overflow-hidden rounded-3xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 col-span-2 h-full gap-3 box-border ">
+                    <div class=" flex-6 relative group overflow-hidden rounded-3xl box-border ">
                         <div style="background-image: url(https://i.pinimg.com/1200x/a3/1f/d3/a31fd30764e7b6c3652bbcf30be59db9.jpg);"
                             class="w-full bg-cover bg-center rounded-3xl h-full group-hover:scale-105 transition transform duration-500 ease-in">
                         </div>
@@ -204,7 +203,7 @@ onMounted(() => {
                         </div>
                     </div>
                     <!-- row-2 -->
-                    <div class="h-[40%] flex  gap-5">
+                    <div class="flex-4 flex flex-row  gap-5">
                         <div class=" w-full relative group overflow-hidden rounded-3xl">
                             <div style="background-image: url(https://i.pinimg.com/736x/1e/8b/5e/1e8b5e3b25be07a2114d891185a2263d.jpg);"
                                 class="w-full bg-cover bg-center rounded-3xl h-full group-hover:scale-105 transition transform duration-500 ease-in">
@@ -274,7 +273,7 @@ onMounted(() => {
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-col h-full gap-3 ">
+                <div class="grid grid-cols-2 md:grid-cols-1 h-full gap-3 ">
 
                     <ProjectCard v-for="item in Col2" :key="item.id" :project="item" />
 
@@ -285,9 +284,8 @@ onMounted(() => {
         </div>
 
         <!-- stats section -->
-        <div class="px-5 pb-12 grid grid-cols-2 gap-6">
-            <div
-                class="w-full  p-6 items-center gap-5 rounded-2xl  bg-linear-to-b from-black to-main text-gray-100 grid grid-cols-2">
+        <div class="px-5 pb-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="w-full order-2 md:order-1  p-6 items-center gap-5 rounded-2xl  bg-linear-to-b from-black to-main text-gray-100 grid grid-cols-2">
                 <div class="flex flex-col gap-8 mb-16">
                     <div
                         class=" border-gray-200/20 border rounded-2xl flex flex-col gap-3 p-5 bg-white/5 backdrop-blur-md transition duration-300 hover:bg-white/10">
@@ -352,10 +350,10 @@ onMounted(() => {
                 <div class="flex flex-col items-end w-full gap-4 ">
 
                     <h2
-                        class=" flex flex-wrap justify-end font-heading text-5xl font-semibold capitalize gap-x-4  leading-tight ">
+                        class=" flex flex-wrap justify-end font-heading text-3xl md:text-5xl font-semibold capitalize gap-x-4  leading-tight ">
                         <span class="text-center">Where Detail Shapes</span>
                         <div class="flex gap-4"><span class="italic  ">Meaningful</span> <img
-                                class="w-40  h-20 object-cover  rounded-full"
+                                class="md:w-40  md:h-20 w-15 h-8 object-cover  rounded-full"
                                 src="https://i.pinimg.com/736x/db/48/75/db4875081f8248aa02d8420912fcf84e.jpg" alt="">
                         </div>
                         <span class="italic"> Design </span>
@@ -376,7 +374,7 @@ onMounted(() => {
                     </div>
                 </div>
                 <!-- stat -->
-                <div class="flex gap-4 py-6">
+                <div class="flex flex-wrap gap-4 py-6">
                     <div class="flex flex-col items-center  gap-1 px-6 ">
                         <h2 class="text-4xl font-bold font-projects">150+</h2>
                         <p class="text-base font-medium">Curated Interiors</p>
@@ -401,8 +399,8 @@ onMounted(() => {
         </div>
 
         <!-- Designed for Every Space -->
-        <div class="p-12 flex gap-3">
-            <div class="max-w-1/4 flex flex-col gap-4 ">
+        <div class="p-12 flex flex-col md:flex-row gap-3">
+            <div class="lg:max-w-1/4 flex flex-col gap-4 ">
                 <h2
                     class="font-bold font-heading text-5xl bg-linear-to-r from-black to-main text-transparent bg-clip-text ">
                     Designed for Every Space

@@ -4,14 +4,14 @@ export const Col1 = [
         id: 1,
         img: 'https://i.pinimg.com/1200x/ac/61/19/ac61196521cec3df1e94987c0b176b79.jpg',
         title: 'Obsidian Living',
-        height: "40%"
+        rowSpan: "row-span-4"
 
     },
     {
         id: 2,
         img: 'https://i.pinimg.com/1200x/d9/bc/a3/d9bca3639c17c89bff02fed826effd28.jpg',
         title: 'Noir Nest',
-        height: '60%'
+         rowSpan: "row-span-6"
     }]
 export const Col2 = [
 
