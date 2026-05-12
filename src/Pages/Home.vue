@@ -20,22 +20,23 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="w-full min-h-screen  flex flex-col gap-10 ">
+    <div class="w-full min-h-screen flex flex-col gap-5 md:gap-10 ">
         <!-- hero-section -->
-        <div class="w-full flex items-center justify-center relative h-screen rounded-4xl px-5 box-border ">
+        <div class="w-full  flex items-center justify-center relative h-screen rounded-2xl md:rounded-4xl px-2 md:px-5 box-border ">
             <div style="background-image: url(https://i.pinimg.com/736x/f0/fc/2b/f0fc2b6b3a4ed4ca321fdecdd6b5fe98.jpg);"
-                class="bg-black  w-full h-screen rounded-4xl  bg-cover bg-center ">
-                <div class=" absolute  flex justify-center  items-center inset-x-5 inset-y-0 bg-black/40 rounded-4xl ">
-                    <div class=" text-center flex flex-col items-center gap-5  justify-center text-white  hero-title">
-                        <h2 class="font-semibold font-heading text-5xl capitalize ">Designed Around Your <span
+                class="bg-black  w-full h-screen rounded-2xl md:rounded-4xl  bg-cover bg-center ">
+                <div class=" absolute  flex justify-center  items-center inset-x-2 md:inset-x-5 inset-y-0 bg-black/40 rounded-2xl md:rounded-4xl ">
+                    <div class=" text-center flex flex-col items-center gap-2 md:gap-5  justify-center text-white  hero-title">
+                        <h2 class="font-semibold font-heading text-4xl md:text-5xl capitalize ">Designed Around Your <span
                                 class="italic bg-linear-to-r from-white to-main text-transparent bg-clip-text  ">Comfort</span>
                         </h2>
-                        <p class="font-body text-sm normal-case w-1/2 ">Lorem ipsum, dolor sit amet consectetur
+                        <p class="font-body text-xs md:text-sm normal-case md:w-1/2 px-5 ">Lorem ipsum, dolor sit amet consectetur
                             adipisicing elit. Obcaecati animi explicabo maiores placeat labore alias, a error quis, qui
                             quia quas.</p>
                         <div>
                             <button
-                                class=" border border-white hover:text-white   hover:bg-[#645a4e] hover:border-main font-body font-medium px-8 py-3 rounded-lg cursor-pointer hover:scale-105 scale-100 ease-linear duration-150">Get
+                                class=" border border-white hover:text-white   hover:bg-[#645a4e] hover:border-main font-body font-medium 
+                                px-6 md:px-8 md:py-3 py-2 mt-3 md:mt-0 rounded-lg cursor-pointer hover:scale-105 scale-100 ease-linear duration-150">Get
                                 Started</button>
                         </div>
                     </div>
@@ -45,11 +46,11 @@ onMounted(() => {
             </div>
         </div>
         <!-- about -->
-        <div class="p-5 flex flex-col md:flex-row gap-8 ">
+        <div class="md:p-5 p-2 flex  flex-col md:flex-row gap-8 ">
             <!-- col-1 -->
             <div class="flex-7 ">
                 <div style="background-image: url(https://i.pinimg.com/1200x/5d/2f/b8/5d2fb87f8c6aacb1d930e01e401f8a05.jpg
-);" class="bg-black rounded-4xl bg-center bg-cover  h-screen flex flex-col items-start  justify-end ">
+);" class="bg-black rounded-2xl md:rounded-4xl bg-center bg-cover  h-screen flex flex-col items-start  justify-end ">
                     <div
                         class="flex flex-col items-start justify-start rounded-4xl text-black font-poppins capitalize ">
                         <span class="pr-6 pt-4 rounded-tr-lg  bg-white">
@@ -60,7 +61,7 @@ onMounted(() => {
                                 class="font-bold text-6xl bg-linear-to-r from-black to-main text-transparent bg-clip-text  ">
                                 Modern</h6>
                         </span>
-                        <span class="pr-6 py-2 rounded-tr-lg bg-white">
+                        <span class="md:pr-6 pr-16 py-2 rounded-tr-lg bg-white">
                             <h6
                                 class="font-bold text-6xl  bg-linear-to-r from-black to-main text-transparent bg-clip-text ">
                                 Minimalist</h6>
@@ -72,26 +73,26 @@ onMounted(() => {
             <div class="flex-3 grid grid-rows-2 gap-6">
 
                 <div
-                    class="flex flex-col items-start justify-center gap-3 font-body  rounded-4xl bg-linear-120 from-black to-main text-white p-5">
-                    <h6 class="rounded-full border px-3 py-1 text-sm  ">aesthetic</h6>
+                    class="flex flex-col items-start justify-center gap-3 font-body rounded-2xl md:rounded-4xl bg-linear-120 from-black to-main text-white p-5">
+                    <h6 class="md:rounded-full rounded-xl border px-3 py-1 text-xs md:text-sm  ">aesthetic</h6>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis labore doloribus recusandae </p>
-                    <h2 class="font-heading capitalize text-4xl font-medium">
+                    <h2 class="font-heading capitalize text-3xl md:text-4xl font-medium">
                         into a gallery of elegance
                     </h2>
                 </div>
                 <div style="background-image: url(https://i.pinimg.com/1200x/ac/61/19/ac61196521cec3df1e94987c0b176b79.jpg);"
-                    class="rounded-4xl  bg-cover bg-center">
+                    class="rounded-2xl md:rounded-4xl  bg-cover bg-center">
 
                 </div>
 
             </div>
         </div>
         <!-- approach -->
-        <div class="p-5">
-            <div class=" w-full rounded-3xl bg-gray-100 px-6 py-20 grid grid-cols-1 md:grid-cols-2 ">
-                <div class="flex flex-col gap-6 ">
-                    <h1 class="font-heading text-5xl font-semibold ">Elevating Everyday Spaces</h1>
-                    <p class="font-body font-normal text-sm text-gray-700 w-[86%]">Lorem ipsum dolor sit amet
+        <div class="md:p-5 p-2">
+            <div class=" w-full rounded-3xl bg-gray-100 md:px-6 px-2 py-5 md:py-20 grid grid-cols-1 md:grid-cols-2 ">
+                <div class="flex flex-col gap-3 md:gap-6 ">
+                    <h1 class="font-heading text-4xl md:text-5xl font-semibold ">Elevating Everyday Spaces</h1>
+                    <p class="font-body font-normal text-xs md:text-sm text-gray-700 w-[86%]">Lorem ipsum dolor sit amet
                         consectetur adipisicing elit. <span class="font-semibold">Temporibus</span> quis voluptate vitae
                         eaque! Nostrum facilis minus, alias necessitatibus, <span class="font-semibold">maiores</span>
                         est beatae quaerat explicabo repudiandae</p>
@@ -99,9 +100,9 @@ onMounted(() => {
                 </div>
                 <!-- Material & Texture -->
                 <!-- Lighting & Atmosphere -->
-                <div class="flex flex-col gap-5 items-center justify-center mt-5 px-12 w-[85%]">
+                <div class="flex flex-col gap-5 items-center justify-center mt-5 md:px-12 md:w-[85%]">
                     <div
-                        class="feature flex gap-4 bg-linear-to-t from-main to-black  hover:bg-black rounded-xl p-4 group">
+                        class="feature flex flex-row gap-4 bg-linear-to-t from-main to-black  hover:bg-black rounded-xl p-2.5 md:p-5 group">
                         <div class=" transition-all duration-300 ease-out">
                             <img src="https://i.pinimg.com/1200x/87/3f/89/873f8928e27c13c03bb5862951ddb09a.jpg"
                                 class="rounded-lg aspect-square  transition-all duration-300 ease-out w-50 group-hover:scale-110 hover:transform-border border-2"
@@ -109,33 +110,33 @@ onMounted(() => {
 
                         </div>
                         <div class=" text-white flex flex-col  gap-1 items-start justify-center ">
-                            <h3 class="font-heading font-medium text-2xl">Concept & Planning</h3>
-                            <p class="font-body text-sm ">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            <h3 class="font-heading font-medium text-lg md:text-2xl">Concept & Planning</h3>
+                            <p class="font-body text-xs md:text-sm ">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 Laboriosam quas consequuntur </p>
                         </div>
                     </div>
 
-                    <div class="feature flex gap-4 bg-black/85 rounded-xl p-5 ">
+                    <div class="feature flex flex-row-reverse gap-4 bg-black/85 rounded-xl p-2.5 md:p-5 ">
                         <div>
                             <img src="https://i.pinimg.com/1200x/87/3f/89/873f8928e27c13c03bb5862951ddb09a.jpg"
                                 class="rounded-lg aspect-sqaure w-50" alt="">
 
                         </div>
-                        <div class=" text-white flex flex-col gap-2">
-                            <h3 class="font-heading font-medium text-2xl">Lorem, ipsum dolor.</h3>
-                            <p class="font-body text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        <div class=" text-white flex flex-col md:gap-2">
+                            <h3 class="font-heading font-medium text-lg md:text-2xl">Lorem, ipsum dolor.</h3>
+                            <p class="font-body text-xs md:text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 Laboriosam quas consequuntur cumque?</p>
                         </div>
                     </div>
-                    <div class="feature flex gap-4 bg-black/85 rounded-xl p-5 ">
+                    <div class="feature flex gap-4 bg-black/85 rounded-xl p-2.5 md:p-5 ">
                         <div>
                             <img src="https://i.pinimg.com/736x/ae/68/b6/ae68b669e2b0ce0174ab9a70980f4cf9.jpg"
                                 class="rounded-lg aspect-sqaure w-50" alt="">
 
                         </div>
-                        <div class=" text-white flex flex-col gap-2">
-                            <h3 class="font-heading font-medium text-2xl">Lorem, ipsum dolor.</h3>
-                            <p class="font-body text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        <div class=" text-white flex flex-col gap-1 md:gap-2">
+                            <h3 class="font-heading font-medium text-lg md:text-2xl">Lorem, ipsum dolor.</h3>
+                            <p class="font-body text-xs md:text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 Laboriosam quas consequuntur cumque?</p>
                         </div>
                     </div>
@@ -144,18 +145,18 @@ onMounted(() => {
 
         </div>
         <!-- project -->
-        <div class=" px-5">
+        <div class="px-2 py-5 md:px-5">
             <!-- heading -->
-            <div class="flex flex-row gap-12  justify-between items-start w-full">
-                <div class="w-[50%]">
+            <div class="flex flex-col md:flex-row gap-3 md:gap-12 justify-between items-end md:items-start w-full">
+                <div class="md:flex-5">
                     <h2
-                        class="font-bold font-heading text-5xl bg-linear-to-r from-black to-main text-transparent bg-clip-text ">
+                        class="font-bold  font-heading text-4xl md:text-5xl bg-linear-to-r from-black to-main text-transparent bg-clip-text ">
                         Explore Our Collection
                     </h2>
 
                 </div>
-                <div class="w-[40%]">
-                    <p class="text-end font-body font-medium text-sm">
+                <div class="md:flex-4">
+                    <p class="md:text-end font-body font-medium text-xs md:text-sm">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum possimus atque dolores quasi
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. A
                     </p>
@@ -284,7 +285,7 @@ onMounted(() => {
         </div>
 
         <!-- stats section -->
-        <div class="px-5 pb-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="px-5  pb-12 grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="w-full order-2 md:order-1  p-6 items-center gap-5 rounded-2xl  bg-linear-to-b from-black to-main text-gray-100 grid grid-cols-2">
                 <div class="flex flex-col gap-8 mb-16">
                     <div
@@ -399,7 +400,7 @@ onMounted(() => {
         </div>
 
         <!-- Designed for Every Space -->
-        <div class="p-12 flex flex-col md:flex-row gap-3">
+        <div class="p-12 flex  flex-col md:flex-row gap-3">
             <div class="lg:max-w-1/4 flex flex-col gap-4 ">
                 <h2
                     class="font-bold font-heading text-5xl bg-linear-to-r from-black to-main text-transparent bg-clip-text ">
@@ -434,7 +435,7 @@ onMounted(() => {
 
             </ul>
         </div>
-        <div class="w-full ">
+        <div class="w-full  ">
             <div class="w-full relative flex items-center justify-start bg-cover bg-center min-h-screen bg-no-repeat "
                 style="background-image: url(https://i.pinimg.com/1200x/1e/6b/a2/1e6ba2c54b4b7333d8db9e3a43cda791.jpg);">
                 <div class="absolute inset-0  bg-linear-to-bl from-white/10 to-black/45"></div>
