@@ -165,29 +165,29 @@ onMounted(() => {
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-4 gap-5 py-10 w-full min-h-screen">
-                <div class="grid grid-cols-2 md:grid-cols-1 h-full gap-3 ">
+                <div class="grid grid-cols-1 md:grid-cols-1 h-full gap-3 ">
                     <ProjectCard v-for="item in Col1" :key="item.id" :project="item" />
                 </div>
                 <!-- coloumn-2   -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 col-span-2 h-full gap-3 box-border ">
                     <div class=" flex-6 relative group overflow-hidden rounded-3xl box-border ">
                         <div style="background-image: url(https://i.pinimg.com/1200x/a3/1f/d3/a31fd30764e7b6c3652bbcf30be59db9.jpg);"
-                            class="w-full bg-cover bg-center rounded-3xl h-full group-hover:scale-105 transition transform duration-500 ease-in">
+                            class="w-full h-[300px] md:h-full bg-cover bg-center rounded-3xl group-hover:scale-105 transition transform duration-500 ease-in">
                         </div>
                         <div
-                            class=" w-full h-auto hover:bg-black/30 ease-in duration-300 transition-all rounded-2xl bg-linear-to-t from-black/90 from-0% via-black/40 via-25% to-transparent to-30% absolute inset-0 flex items-end justify-center  py-3 ">
-                            <div class="transform translate-y-1/2 group-hover:translate-y-0 transition duration-300">
+                            class=" w-full h-auto hover:bg-black/30 ease-in duration-300 transition-all rounded-2xl bg-linear-to-t from-black/90  md:from-0% via-black/40  md:via-25% to-transparent md:to-30% absolute inset-0 flex items-end justify-center  md:py-3 p-2 ">
+                            <div class="transform md:translate-y-1/2 md:group-hover:translate-y-0 transition duration-300">
                                 <div class="flex  justify-between items-center w-full">
-                                    <h1 class="text-3xl font-projects font-semibold  text-white"> Velvet Dusk Interiors
+                                    <h1 class="text-xl md:text-3xl font-projects font-semibold  text-white"> Velvet Dusk Interiors
                                     </h1>
-                                    <span class="  text-black bg-white rounded-full p-2 ">
+                                    <span class="  text-black bg-white rounded-full p-1 md:p-2 ">
                                         <ArrowUpRight
                                             class="hover:scale-125 transition-all ease-in duration-200 cursor-pointer" />
                                     </span>
                                 </div>
-                                <div class="opacity-0 group-hover:opacity-100 transition duration-300 mt-3">
+                                <div class="md:opacity-0 md:group-hover:opacity-100 transition duration-300 md:mt-3">
 
-                                    <p class="font-body text-white text-sm py-2 text-center">Lorem ipsum dolor sit amet,
+                                    <p class="font-body text-white text-xs md:text-sm py-2 text-center">Lorem ipsum dolor sit amet,
                                         consectetur
                                         adipisicing elit. Cumque magni alias ipsam?</p>
                                     <!-- buttons -->
