@@ -1,14 +1,26 @@
 <script setup>
-import { ArrowUpRight, ArrowLeft, PenTool } from 'lucide-vue-next';
+import { ArrowUpRight, ArrowLeft, PenTool, TruckElectricIcon } from 'lucide-vue-next';
 import approach from '../assets/approach.png'
 import gsap from 'gsap';
 import { onMounted } from 'vue';
 import ProjectCard from '../components/ProjectCard.vue';
 import { Col1,Col2 } from '../data/Project';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger)
 onMounted(() => {
-    gsap.from(".hero-title", {
-        y: -80, opacity: 0, duration: 1.2, ease: "power3.out"
+    const tl = gsap.timeline()
+      tl.from(".hero-title", {
+        yPercent:100, opacity: 0, duration: 2, ease: "power3.out",
     })
+    .from(".hero-subtitle", {
+        yPercent:100, opacity: 0, duration: 2, ease: "power3.out",
+    },'-=1.6')
+    gsap.from('.hero-img',{
+    duration:1.2, scale:0.9 ,ease:'power1.in',scrollTrigger:{
+            trigger:'.hero-img',scale:1,scrub:true,top:'top top',end:'bottom 60%',markers:true
+        }
+    })
+  
     gsap.from(".feature", {
         y: 100, opacity: 0, stagger: {
             each: 0.15, from: 'center'
@@ -26,13 +38,17 @@ onMounted(() => {
             <div style="background-image: url(https://i.pinimg.com/736x/f0/fc/2b/f0fc2b6b3a4ed4ca321fdecdd6b5fe98.jpg);"
                 class="bg-black  w-full h-screen rounded-2xl md:rounded-4xl  bg-cover bg-center ">
                 <div class=" absolute  flex justify-center  items-center inset-x-2 md:inset-x-5 inset-y-0 bg-black/40 rounded-2xl md:rounded-4xl ">
-                    <div class=" text-center flex flex-col items-center gap-2 md:gap-5  justify-center text-white  hero-title">
+                    <div class="  text-center flex flex-col items-center gap-2 md:gap-5  justify-center text-white  ">
+                        <div class="overflow-hidden hero-title">
                         <h2 class="font-semibold font-heading text-4xl md:text-5xl capitalize ">Designed Around Your <span
                                 class="italic bg-linear-to-r from-white to-main text-transparent bg-clip-text  ">Comfort</span>
                         </h2>
-                        <p class="font-body text-xs md:text-sm normal-case md:w-1/2 px-5 ">Lorem ipsum, dolor sit amet consectetur
+                        </div>
+                        <div class="overflow-hidden">
+                        <p class="hero-subtitle text-center font-body text-xs md:text-sm normal-case md:w-1/2 px-5 ">Lorem ipsum, dolor sit amet consectetur
                             adipisicing elit. Obcaecati animi explicabo maiores placeat labore alias, a error quis, qui
                             quia quas.</p>
+                            </div>
                         <div>
                             <button
                                 class=" border border-white hover:text-white   hover:bg-[#645a4e] hover:border-main font-body font-medium 
@@ -436,7 +452,7 @@ onMounted(() => {
             </ul>
         </div>
         <div class="w-full  ">
-            <div class="w-full relative flex items-center justify-start bg-cover bg-center min-h-screen bg-no-repeat "
+            <div class=" hero-img w-full relative flex items-center justify-start bg-cover bg-center min-h-screen bg-no-repeat "
                 style="background-image: url(https://i.pinimg.com/1200x/1e/6b/a2/1e6ba2c54b4b7333d8db9e3a43cda791.jpg);">
                 <div class="absolute inset-0  bg-linear-to-bl from-white/10 to-black/45"></div>
                 <div class=" bg-white/90 flex flex-col rounded-xl md:p-4  w-[60%] mx-3 md:w-1/5 md:mx-12 z-[12]">
