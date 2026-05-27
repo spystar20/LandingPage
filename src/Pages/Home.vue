@@ -17,7 +17,7 @@ onMounted(() => {
     },'-=1.6')
     gsap.from('.hero-img',{
     duration:1.2, scale:0.9 ,ease:'power1.in',scrollTrigger:{
-            trigger:'.hero-img',scale:1,scrub:true,top:'top top',end:'bottom 60%',markers:true
+            trigger:'.hero-img',scale:1,scrub:true,top:'top top',end:'bottom 60%',
         }
     })
   
@@ -38,17 +38,17 @@ onMounted(() => {
             <div style="background-image: url(https://i.pinimg.com/736x/f0/fc/2b/f0fc2b6b3a4ed4ca321fdecdd6b5fe98.jpg);"
                 class="bg-black  w-full h-screen rounded-2xl md:rounded-4xl  bg-cover bg-center ">
                 <div class=" absolute  flex justify-center  items-center inset-x-2 md:inset-x-5 inset-y-0 bg-black/40 rounded-2xl md:rounded-4xl ">
-                    <div class="  text-center flex flex-col items-center gap-2 md:gap-5  justify-center text-white  ">
+                    <div class="overflow-hidden  text-center flex flex-col items-center gap-2 md:gap-5  justify-center text-white  ">
                         <div class="overflow-hidden hero-title">
                         <h2 class="font-semibold font-heading text-4xl md:text-5xl capitalize ">Designed Around Your <span
                                 class="italic bg-linear-to-r from-white to-main text-transparent bg-clip-text  ">Comfort</span>
                         </h2>
                         </div>
-                        <div class="overflow-hidden">
+                    
                         <p class="hero-subtitle text-center font-body text-xs md:text-sm normal-case md:w-1/2 px-5 ">Lorem ipsum, dolor sit amet consectetur
                             adipisicing elit. Obcaecati animi explicabo maiores placeat labore alias, a error quis, qui
                             quia quas.</p>
-                            </div>
+                            
                         <div>
                             <button
                                 class=" border border-white hover:text-white   hover:bg-[#645a4e] hover:border-main font-body font-medium 
