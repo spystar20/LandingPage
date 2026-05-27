@@ -9,16 +9,19 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger)
 onMounted(() => {
     const tl = gsap.timeline()
-      tl.from(".hero-title", {
+
+    .from(".hero-title", {
         yPercent:100, opacity: 0, duration: 2, ease: "power3.out",
     })
     .from(".hero-subtitle", {
         yPercent:100, opacity: 0, duration: 2, ease: "power3.out",
     },'-=1.6')
+    .from('.button-hero',{
+        yPercent:40,opacity:0,duration:2,ease:'power3.out'
+    },'-=1')
     gsap.from('.hero-img',{
-    duration:1.2, scale:0.9 ,ease:'power1.in',scrollTrigger:{
-            trigger:'.hero-img',scale:1,scrub:true,top:'top top',end:'bottom 60%',
-        }
+    duration:2, scale:1.2 ,ease:'power3.out',scrollTrigger:{
+            trigger:'.hero-img',scrub:true,start:'top top',end:'+=30%',scrub:true, markers:true}
     })
   
     gsap.from(".feature", {
@@ -32,11 +35,13 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="w-full min-h-screen flex flex-col gap-5 md:gap-10 ">
+    <div class="w-full min-h-screen flex flex-col gap-5 md:gap-10  overflow-hidden">
+  
         <!-- hero-section -->
         <div class="w-full  flex items-center justify-center relative h-screen rounded-2xl md:rounded-4xl px-2 md:px-5 box-border ">
-            <div style="background-image: url(https://i.pinimg.com/736x/f0/fc/2b/f0fc2b6b3a4ed4ca321fdecdd6b5fe98.jpg);"
-                class="bg-black  w-full h-screen rounded-2xl md:rounded-4xl  bg-cover bg-center ">
+            <div 
+                class="bg-black  w-full h-screen rounded-2xl md:rounded-4xl  bg-cover bg-center overflow-hidden">
+                <img src="https://i.pinimg.com/1200x/21/f5/9c/21f59c5b923c8f866d7da4a87dda0b4d.jpg" class="hero-img object-cover w-full h-screen  overflow-hidden" alt="">
                 <div class=" absolute  flex justify-center  items-center inset-x-2 md:inset-x-5 inset-y-0 bg-black/40 rounded-2xl md:rounded-4xl ">
                     <div class="overflow-hidden  text-center flex flex-col items-center gap-2 md:gap-5  justify-center text-white  ">
                         <div class="overflow-hidden hero-title">
@@ -49,9 +54,9 @@ onMounted(() => {
                             adipisicing elit. Obcaecati animi explicabo maiores placeat labore alias, a error quis, qui
                             quia quas.</p>
                             
-                        <div>
+                        <div class="overflow-hidden">
                             <button
-                                class=" border border-white hover:text-white   hover:bg-[#645a4e] hover:border-main font-body font-medium 
+                                class="button-hero border border-white hover:text-white   hover:bg-[#645a4e] hover:border-main font-body font-medium 
                                 px-6 md:px-8 md:py-3 py-2 mt-3 md:mt-0 rounded-lg cursor-pointer hover:scale-105 scale-100 ease-linear duration-150">Get
                                 Started</button>
                         </div>
