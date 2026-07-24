@@ -2,12 +2,13 @@
 import gsap from 'gsap';
 import { nextTick, onMounted, ref } from 'vue';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-console.log(document.querySelector('.button-hero'));
 gsap.registerPlugin(ScrollTrigger)
 const buttonHero = ref(null)
 onMounted(async() => {
     await nextTick()
-    const tl = gsap.timeline()
+    const tl = gsap.timeline({scrollTrigger:{
+  trigger:'.hero' ,   start:'top top ', end:'bottom top' ,pin:true,markers:true,pinSpacing:false
+    }})
    
  tl.from('.hero-img',{
     duration:2, scale:1.2 ,ease:'power3.out'})

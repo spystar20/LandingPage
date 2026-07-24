@@ -1,16 +1,27 @@
 <script setup>
 import { XIcon, MenuIcon } from 'lucide-vue-next';
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
+import gsap from 'gsap';
 const isOpen = ref(false)
+onMounted(()=>{
+    // const tl = gsap.timeline()
+    gsap.from('.logo',{
+        xPercent:-100,ease:'sine',duration:0.8,scale:0
+    })
+    gsap.from('.nav',{
+                xPercent:100,ease:'sine',duration:0.8,scale:0
+
+    })
+})
 </script>
 
 <template>
     <div
         class="px-5 hidden md:flex justify-between items-center-safe text-gray-800 font-medium w-full  py-5 text-lg  capitalize ">
         <div>
-            <h2 class="text-4xl font-bold text-main uppercase">spaceaura</h2>
+            <h2 class="text-4xl font-bold text-main uppercase logo">spaceaura</h2>
         </div>
-        <ul class="flex justify-center items-center gap-6 text-main font-body font-medium">
+        <ul class="flex justify-center items-center gap-6 text-main font-body font-medium nav">
             <li
                 class="px-5 py-1 rounded-full hover:border-main hover:bg-main  hover:text-white border-white border-2  hover:-translate-y-1 hover:ease-out duration-150 cursor-pointer ">
                 <a>home</a></li>
