@@ -2,17 +2,29 @@
 import gsap from 'gsap';
 import {  onMounted } from 'vue';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import SplitType from 'split-type';
 gsap.registerPlugin(ScrollTrigger)
+
 onMounted(()=>{
-const tl = gsap.timeline({scrollTrigger:{
-start:'top 50%',end:'+=100',markers:true,scrub:true
-}})
-// tl.from('.container',{
-//     scrollTrigger:{
-//         markers:true,
-//     }
-// })
+    const split = new SplitType('.title',{
+    types:'words'
 })
+const tl = gsap.timeline({ScrollTrigger:{
+trigger:'.container',scrub:true,start:'top top', end:'bottom center'
+}})
+tl.from('.paragraph',{
+    xPercent:60,opacity:0,ease:'power3',duration:0.5
+})
+to(split.words,{
+    color:'#ffff',stagger:1,ease:'power2',scrollTrigger:{
+       trigger:split.words,
+        start:"top 70%",
+        end:"bottom center",
+        scrub:true
+    }
+}
+
+)})
 </script>
 <template>
  <div class="md:p-5 p-2 flex  bg-white relative z-10  flex-col md:flex-row gap-8 container ">
@@ -43,9 +55,9 @@ start:'top 50%',end:'+=100',markers:true,scrub:true
 
                 <div
                     class="flex flex-col items-start justify-center gap-3 font-body rounded-2xl md:rounded-4xl bg-linear-120 from-black to-main text-white p-5">
-                    <h6 class="md:rounded-full rounded-xl border px-3 py-1 text-xs md:text-sm  ">aesthetic</h6>
+                    <h6 class="md:rounded-full rounded-xl border px-3 py-1 text-xs md:text-sm paragraph ">aesthetic</h6>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis labore doloribus recusandae </p>
-                    <h2 class="font-heading capitalize text-3xl md:text-4xl font-medium">
+                    <h2 class="font-heading capitalize text-3xl md:text-4xl font-medium title">
                         into a gallery of elegance
                     </h2>
                 </div>
@@ -58,4 +70,7 @@ start:'top 50%',end:'+=100',markers:true,scrub:true
         </div>
 </template>
 <style scoped>
+.title{
+color: #666;
+}
 </style>

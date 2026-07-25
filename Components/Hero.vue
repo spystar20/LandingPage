@@ -6,9 +6,7 @@ gsap.registerPlugin(ScrollTrigger)
 const buttonHero = ref(null)
 onMounted(async() => {
     await nextTick()
-    const tl = gsap.timeline({scrollTrigger:{
-  trigger:'.hero' ,   start:'top top ', end:'bottom top' ,pin:true,markers:true,pinSpacing:false
-    }})
+    const tl = gsap.timeline()
    
  tl.from('.hero-img',{
     duration:2, scale:1.2 ,ease:'power3.out'})
@@ -22,9 +20,6 @@ onMounted(async() => {
     gsap.from('.button-hero',{
        y:100,opacity:0.5,duration:2,ease:'power3.out'
     })
-    
-   
-
 })
 
 </script>
