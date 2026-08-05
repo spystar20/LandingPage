@@ -9,22 +9,30 @@ onMounted(async() => {
     const tl = gsap.timeline()
    
  tl.from('.hero-img',{
-    duration:2, scale:1.2 ,ease:'power3.out'})
- 
-    tl.from(".hero-title", {
-        yPercent:100, opacity: 0, duration: 1.2, ease: "power3.out",
+    duration:1.5, scale:1.2 ,ease:'power3.out'})
+ .from(".hero-title", {
+        yPercent:100, opacity: 0, duration: 1, ease: "power3.out",
     },'-=1.2')
     .from(".hero-subtitle", {
-        yPercent:60, opacity: 0, duration: 1.2, ease: "power3.out",
+        yPercent:60, opacity: 0, duration:1, ease: "power3.out",
     },'-=0.8')
     gsap.from('.button-hero',{
        y:100,opacity:0.5,duration:2,ease:'power3.out'
     })
+ gsap.to('.hero-img', {
+    y: 100,scale:1.1,
+    scrollTrigger: {
+      trigger: '.hero-img',
+      start: 'top top',
+      end: 'bottom top',
+      scrub: true,
+      markers: true
+    }
+  })
 })
 
 </script>
 <template>
-
 <div class="w-full hero  flex items-center justify-center relative h-screen rounded-2xl md:rounded-4xl px-2 md:px-5 box-border ">
             <div 
                 class="bg-black w-full h-screen rounded-2xl md:rounded-4xl  bg-cover bg-center overflow-hidden">
@@ -54,4 +62,6 @@ onMounted(async() => {
             </div>
         </div>
 </template>
-<style scoped></style>
+<style scoped>
+
+</style>
